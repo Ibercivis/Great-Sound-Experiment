@@ -7,6 +7,8 @@
     tools:context=".Jugar"
     android:background="@drawable/fondo_nivel_1">
 
+    //Cabecera - Título
+
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
@@ -16,6 +18,8 @@
         android:textSize="40dp"
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"/>
+
+    // Zona Amarilla de ESCUCHA
 
     <LinearLayout
         android:id="@+id/espacioaudios"
@@ -133,7 +137,7 @@
     </LinearLayout>
 
 
-//A partir de aquí es toda la barra de abajo
+//A partir de aquí es toda la barra de abajo - JUEGO
 
     <LinearLayout
         android:id="@+id/barrafondo"
