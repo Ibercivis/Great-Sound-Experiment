@@ -72,29 +72,29 @@ public class Partida {
         if(nivel==2){
             grupo1 = 2;
             grupo2 = 1;
-            audio1 = "a"+grupo1+contador+".mp3";
-            audio2 = "a"+grupo2+contador+".wav";
+            audio1 = "a"+grupo1+contador;
+            audio2 = "a"+grupo2+contador;
             audioBueno = audio2;
         }
         if(nivel==3){
             grupo1 = 2;
             grupo2 = 3;
-            audio1 = "a"+grupo1+contador+".mp3";
-            audio2 = "a"+grupo2+contador+".mp3";
+            audio1 = "a"+grupo1+contador;
+            audio2 = "a"+grupo2+contador;
             audioBueno = audio2;
         }
         if(nivel==4){
             grupo1 = 4;
             grupo2 = 5;
-            audio1 = "a"+grupo1+contador+".mp3";
-            audio2 = "a"+grupo2+contador+".mp3";
+            audio1 = "a"+grupo1+contador;
+            audio2 = "a"+grupo2+contador;
             audioBueno = audio2;
         }
         if(nivel==5){
             grupo1 = 5;
             grupo2 = 1;
-            audio1 = "a"+grupo1+contador+".mp3";
-            audio2 = "a"+grupo2+contador+".wav";
+            audio1 = "a"+grupo1+contador;
+            audio2 = "a"+grupo2+contador;
             audioBueno = audio2;
         }
 

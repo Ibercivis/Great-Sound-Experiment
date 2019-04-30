@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Estadisticas"
+    tools:context=".Enhorabuena"
     android:background="@drawable/fondo_nivel_1">
 
     //Cabecera - Título
@@ -13,7 +13,7 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Estadísticas"
+        android:text="¡Enhorabuena!"
         android:textStyle="bold"
         android:textSize="40dp"
         android:layout_marginTop="40dp"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aquí puedes consultar tus estadísticas"
+            android:text="Eres un titán, una bestia..."
             android:textStyle="bold"
             android:textSize="16dp"
             android:layout_gravity="center"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Compites contra todos, pero sobre todo contra ti mismo."
+            android:text="¡Oh, Magnificioso!"
             android:layout_marginBottom="24dp"/>
 
 
@@ -73,8 +73,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/stats_azul"
-                />
+                android:src="@drawable/stats_gris"
+                android:onClick="aStats"/>
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/juego_gris"
+                android:src="@drawable/juego_azul"
                 android:onClick="aJuego"/>
         </LinearLayout>
 

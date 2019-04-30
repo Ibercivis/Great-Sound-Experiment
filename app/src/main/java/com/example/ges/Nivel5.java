@@ -1,7 +1,6 @@
 package com.example.ges;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +12,7 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 
-public class Nivel2 extends AppCompatActivity {
+public class Nivel5 extends AppCompatActivity {
 
     public MediaPlayer mp1, mp2;
     public ImageView bplay1, bplay2;
@@ -23,18 +22,16 @@ public class Nivel2 extends AppCompatActivity {
     public Resultado result1, result2, result3;
     int partidas = 1;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nivel2);
+        setContentView(R.layout.activity_nivel5);
         bplay1 = findViewById(R.id.boton1);
         bplay2 = findViewById(R.id.boton2);
         voto1 = findViewById(R.id.audio1);
         voto2 = findViewById(R.id.audio2);
         int int1;
-        result1=generarPares(2);
+        result1=generarPares(5);
 
 
 
@@ -64,13 +61,13 @@ public class Nivel2 extends AppCompatActivity {
 
         double aleatorio2 = (Math.random());
         if(aleatorio2<=0.5){
-            mp1 = MediaPlayer.create(getApplicationContext(), id1);
-            mp2 = MediaPlayer.create(getApplicationContext(), id2);
+            mp1 = MediaPlayer.create(this, id1);
+            mp2 = MediaPlayer.create(this, id2);
             audioganador = 2;
         }
         if (aleatorio2>0.5){
-            mp2 = MediaPlayer.create(getApplicationContext(), id1);
-            mp1 = MediaPlayer.create(getApplicationContext(), id2);
+            mp2 = MediaPlayer.create(this, id1);
+            mp1 = MediaPlayer.create(this, id2);
             audioganador = 1;
         }
 
@@ -142,6 +139,8 @@ public class Nivel2 extends AppCompatActivity {
     public void votar1(View view){
         int elresultado1, elresultado2, elresultado3;
         String laclave1, laclave2, laclave3;
+        mp1.stop();
+        mp2.stop();
         if(partidas==1){
             elresultado1 = result1.getGanador();
             laclave1 = result1.getKey();
@@ -150,12 +149,12 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                result2=generarPares(2);
+                result2=generarPares(5);
                 laclave2=result2.getKey();
                 bplay2.setImageResource(R.drawable.mute_blanco);
                 bplay1.setImageResource(R.drawable.mute_blanco);
                 if (laclave2.equals(laclave1)){
-                    result2=generarPares(2);
+                    result2=generarPares(5);
                     bplay2.setImageResource(R.drawable.mute_blanco);
                     bplay1.setImageResource(R.drawable.mute_blanco);
                 }
@@ -164,7 +163,7 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                aStats(findViewById(R.id.boton1));
+                aStats();
             }
         }
         if(partidas==2){
@@ -175,12 +174,12 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                result3=generarPares(2);
+                result3=generarPares(5);
                 laclave3=result3.getKey();
                 bplay2.setImageResource(R.drawable.mute_blanco);
                 bplay1.setImageResource(R.drawable.mute_blanco);
                 if (laclave3.equals(laclave2)){
-                    result3=generarPares(2);
+                    result3=generarPares(5);
                     bplay2.setImageResource(R.drawable.mute_blanco);
                     bplay1.setImageResource(R.drawable.mute_blanco);
                 }
@@ -189,7 +188,7 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                aStats(findViewById(R.id.boton1));
+                aStats();
             }
         }
         if(partidas==3){
@@ -199,18 +198,17 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
+                aEnhorabuena();
 
             }
             if(elresultado3==2){
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                aStats(findViewById(R.id.boton1));
+                aStats();
             }
         }
-
         partidas = (partidas + 1);
-
     }
 
     public void votar2(View view){
@@ -226,13 +224,12 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-
-                result2=generarPares(2);
+                result2=generarPares(5);
                 laclave2=result2.getKey();
                 bplay2.setImageResource(R.drawable.mute_blanco);
                 bplay1.setImageResource(R.drawable.mute_blanco);
                 if (laclave2.equals(laclave1)){
-                    result2=generarPares(2);
+                    result2=generarPares(5);
                     bplay2.setImageResource(R.drawable.mute_blanco);
                     bplay1.setImageResource(R.drawable.mute_blanco);
                 }
@@ -242,7 +239,7 @@ public class Nivel2 extends AppCompatActivity {
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
 
-                aStats(findViewById(R.id.boton1));
+                aStats();
             }
         }
         if(partidas==2){
@@ -253,22 +250,21 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-
-                result3=generarPares(2);
+                result3=generarPares(5);
                 laclave3=result3.getKey();
                 bplay2.setImageResource(R.drawable.mute_blanco);
                 bplay1.setImageResource(R.drawable.mute_blanco);
                 if (laclave3.equals(laclave2)){
-                    result3=generarPares(2);
+                    result3=generarPares(5);
                     bplay2.setImageResource(R.drawable.mute_blanco);
                     bplay1.setImageResource(R.drawable.mute_blanco);
                 }
             }
-            if(elresultado2==2){
+            if(elresultado2==1){
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                aStats(findViewById(R.id.boton1));
+                aStats();
             }
         }
         if(partidas==3){
@@ -278,34 +274,44 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                aNivel3();
+                aEnhorabuena();
 
             }
-            if(elresultado3==2){
+            if(elresultado3==1){
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                aStats(findViewById(R.id.boton1));
+                aStats();
             }
         }
-
         partidas = (partidas + 1);
 
     }
 
 
-    public void aStats(View view){
+    public void aStats(){
 
         Intent intent = new Intent (this, Estadisticas.class);
         startActivityForResult(intent, 0);
 
     }
 
-    public void aNivel3(){
+    public void aStatsB(View view){
 
-        Intent intent = new Intent (this, Nivel3.class);
+        Intent intent = new Intent (this, Estadisticas.class);
+        startActivityForResult(intent, 0);
+
+    }
+
+    public void aEnhorabuena(){
+
+        Intent intent = new Intent (this, Enhorabuena.class);
         startActivityForResult(intent, 0);
 
     }
 
 }
+
+
+
+

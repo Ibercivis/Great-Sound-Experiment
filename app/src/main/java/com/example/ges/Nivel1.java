@@ -149,7 +149,7 @@ public class Nivel1 extends AppCompatActivity {
         laclave1 = result1.getKey();
         if(elresultado1==1){
 
-            Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_LONG);
+            Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
             toast1.setGravity(Gravity.CENTER, 0, 0);
             toast1.show();
             result2=generarPares(1);
@@ -163,7 +163,7 @@ public class Nivel1 extends AppCompatActivity {
             }
         }
         if(elresultado1==2){
-            Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+            Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
             toast1.setGravity(Gravity.CENTER, 0, 0);
             toast1.show();
             aStats();
@@ -174,7 +174,7 @@ public class Nivel1 extends AppCompatActivity {
             laclave2 = result2.getKey();
             if(elresultado2==1){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(1);
@@ -188,7 +188,7 @@ public class Nivel1 extends AppCompatActivity {
                 }
             }
             if(elresultado2==2){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
@@ -198,14 +198,14 @@ public class Nivel1 extends AppCompatActivity {
             elresultado3 = result3.getGanador();
             if(elresultado3==1){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aNivel2();
 
             }
             if(elresultado3==2){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
@@ -224,7 +224,7 @@ public class Nivel1 extends AppCompatActivity {
             laclave1 = result1.getKey();
             if(elresultado1==2){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result2=generarPares(1);
@@ -238,7 +238,7 @@ public class Nivel1 extends AppCompatActivity {
                 }
             }
             if(elresultado1==1){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
 
@@ -250,7 +250,7 @@ public class Nivel1 extends AppCompatActivity {
             laclave2 = result2.getKey();
             if(elresultado2==2){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(1);
@@ -264,7 +264,7 @@ public class Nivel1 extends AppCompatActivity {
                 }
             }
             if(elresultado2==1){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
@@ -274,14 +274,14 @@ public class Nivel1 extends AppCompatActivity {
             elresultado3 = result3.getGanador();
             if(elresultado3==2){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aNivel2();
 
             }
             if(elresultado3==1){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
