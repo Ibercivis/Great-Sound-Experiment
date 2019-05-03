@@ -5,36 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login"
-    android:background="@drawable/fondo_auriculares">
+    android:background="@drawable/fondobn">
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="160dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="64dp"
-        android:background="@drawable/borde_redondo_secundario"
+        android:layout_marginTop="80dp"
+
+        android:background="@drawable/borde_redondo"
         />
 
     <ImageView
-        android:id="@+id/logoplay"
-        android:layout_marginTop="70dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="LogoPlay"
-        app:srcCompat="@drawable/iconoplay" />
+        android:id="@+id/imageView"
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="LogoGSE"
+        app:srcCompat="@drawable/logobueno" />
+
 
     <TextView
-        android:id="@+id/registrate"
+        android:id="@+id/identificate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="IDENTIFÍCATE"
+        android:layout_below="@id/imageView"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="60dp"
         android:textSize="18dp"/>
 
 
@@ -43,8 +47,9 @@
         android:id="@+id/usuario"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_below="@id/identificate"
         android:orientation="horizontal"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="50dp">
 
         <ImageView
@@ -73,8 +78,9 @@
         android:id="@+id/contraseña"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_below="@id/usuario"
         android:orientation="horizontal"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="8dp"
         android:layout_marginLeft="50dp">
 
         <ImageView
@@ -105,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/contraseña"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/boton_redondo_inicio"
         android:text="Aceptar"
         android:clickable="true"

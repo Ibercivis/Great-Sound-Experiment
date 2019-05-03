@@ -21,6 +21,7 @@ public class Nivel4 extends AppCompatActivity {
     Button voto1, voto2;
     public Resultado result1, result2, result3;
     int partidas = 1;
+    ImageView barra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class Nivel4 extends AppCompatActivity {
         voto2 = findViewById(R.id.audio2);
         int int1;
         result1=generarPares(4);
-
+        barra = findViewById(R.id.barraprogreso);
 
 
 
@@ -147,6 +148,7 @@ public class Nivel4 extends AppCompatActivity {
             if(elresultado1==1){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result2=generarPares(4);
@@ -172,6 +174,7 @@ public class Nivel4 extends AppCompatActivity {
             if(elresultado2==1){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(4);
@@ -222,6 +225,7 @@ public class Nivel4 extends AppCompatActivity {
             if(elresultado1==2){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result2=generarPares(4);
@@ -248,6 +252,7 @@ public class Nivel4 extends AppCompatActivity {
             if(elresultado2==2){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(4);
@@ -305,8 +310,9 @@ public class Nivel4 extends AppCompatActivity {
 
     public void aNivel5(){
 
-        Intent intent = new Intent (this, Nivel5.class);
+        Intent intent = new Intent (this, Nivel5.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivityForResult(intent, 0);
+        finish();
 
     }
 

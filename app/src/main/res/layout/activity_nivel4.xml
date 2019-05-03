@@ -19,13 +19,24 @@
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"/>
 
+    //Barra de progreso
+
+    <ImageView
+
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:id="@+id/barraprogreso"
+        android:layout_below="@id/titulo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/barranivel1"/>
+
     // Zona Amarilla de ESCUCHA
 
     <LinearLayout
         android:id="@+id/espacioaudios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titulo"
+        android:layout_below="@id/barraprogreso"
         android:layout_marginTop="30dp"
         android:orientation="vertical"
         android:background="#40ffcc00">
@@ -110,7 +121,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/espacioaudios"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:orientation="vertical">
 
         <TextView

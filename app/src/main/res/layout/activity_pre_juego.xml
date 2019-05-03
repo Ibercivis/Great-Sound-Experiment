@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreJuego"
+    android:background="@drawable/fondo_nivel_1">
+
+    //Cabecera - Título
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El Reto"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    // Zona Amarilla de ESCUCHA
+
+    <LinearLayout
+        android:id="@+id/espacioaudios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:background="#40ffcc00">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Estás preparad@ para enfrentarte al reto?"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Se te van a presentar 2 audios de distinta calidad. Primero deberás escuchar cada uno; después, elegir cuál de los dos suena mejor."
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Recuerda utilizar tus auriculares para poder apreciar las diferencias. ¡Cada nivel es más difícil que el anterior!"
+            android:layout_marginBottom="24dp"/>
+
+
+
+    </LinearLayout>
+
+    //A partir de aquí es el ESPACIO DE RESPUESTA
+
+<Button
+    android:layout_width="260dp"
+    android:layout_height="40dp"
+    android:text="JUGAR"
+    android:background="@drawable/boton_redondo_inicio"
+    android:layout_below="@id/espacioaudios"
+    android:layout_marginTop="80dp"
+    android:layout_centerHorizontal="true"
+    android:onClick="aJuego"/>
+
+
+    //A partir de aquí es toda la barra de abajo - JUEGO
+
+    <LinearLayout
+        android:id="@+id/barrafondo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:elevation="5dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/stats_gris"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/juego_azul"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/perfil_gris"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

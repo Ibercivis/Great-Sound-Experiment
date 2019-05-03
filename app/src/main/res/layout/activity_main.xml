@@ -12,23 +12,23 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="160dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="80dp"
+
         android:background="@drawable/borde_redondo"
         />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="90dp"
         android:layout_width="match_parent"
-        android:layout_height="274dp"
+        android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:contentDescription="LogoGSE"
-        app:srcCompat="@drawable/logo_gse" />
+        app:srcCompat="@drawable/logobueno" />
 
     <Button
         android:id="@+id/button"
@@ -39,8 +39,8 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
        android:layout_centerHorizontal="true"
-        android:layout_below="@id/textView"
-        android:layout_marginTop="36dp"
+        android:layout_below="@id/textView2"
+        android:layout_marginTop="76dp"
         android:clickable="true"
         android:onClick="aRegistro"/>
 
@@ -59,14 +59,26 @@
         android:onClick="aLogin"/>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:text="¿Eres capaz de distinguir qué audio suena mejor?
-Escucha, compite y aprende"
+        android:text="¿Eres capaz de distinguir qué audio suena mejor?"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
         android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="Escucha, aprende, compite"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/textView1"
         android:layout_centerHorizontal="true"/>
 
     <ImageView
@@ -75,8 +87,8 @@ Escucha, compite y aprende"
         android:layout_height="30dp"
         app:srcCompat="@drawable/logo_flecha"
         android:layout_toRightOf="@id/button"
-        android:layout_below="@id/textView"
-        android:layout_marginTop="40dp"/>
+        android:layout_below="@id/textView2"
+        android:layout_marginTop="80dp"/>
 
     <ImageView
         android:id="@+id/imageView3"

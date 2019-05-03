@@ -11,19 +11,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        char hashashd;
-        char prueba2;
+
     }
 
     public void aRegistro(View view) {
         Intent intent = new Intent (this, Registro.class);
-        startActivityForResult(intent, 0);
-
+        startActivity(intent);
+        finish();
     }
 
     public void aLogin(View view) {
         Intent intent = new Intent (this, Login.class);
-        startActivityForResult(intent, 0);
+        startActivity(intent);
+        finish();
 
     }
 }

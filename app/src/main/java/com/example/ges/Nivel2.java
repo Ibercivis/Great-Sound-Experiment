@@ -22,6 +22,7 @@ public class Nivel2 extends AppCompatActivity {
     Button voto1, voto2;
     public Resultado result1, result2, result3;
     int partidas = 1;
+    ImageView barra;
 
 
 
@@ -33,9 +34,8 @@ public class Nivel2 extends AppCompatActivity {
         bplay2 = findViewById(R.id.boton2);
         voto1 = findViewById(R.id.audio1);
         voto2 = findViewById(R.id.audio2);
-        int int1;
         result1=generarPares(2);
-
+        barra = findViewById(R.id.barraprogreso);
 
 
 
@@ -142,12 +142,15 @@ public class Nivel2 extends AppCompatActivity {
     public void votar1(View view){
         int elresultado1, elresultado2, elresultado3;
         String laclave1, laclave2, laclave3;
+        mp1.stop();
+        mp2.stop();
         if(partidas==1){
             elresultado1 = result1.getGanador();
             laclave1 = result1.getKey();
             if(elresultado1==1){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result2=generarPares(2);
@@ -173,6 +176,7 @@ public class Nivel2 extends AppCompatActivity {
             if(elresultado2==1){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(2);
@@ -199,6 +203,7 @@ public class Nivel2 extends AppCompatActivity {
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
+                aNivel3();
 
             }
             if(elresultado3==2){
@@ -224,6 +229,7 @@ public class Nivel2 extends AppCompatActivity {
             if(elresultado1==2){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
 
@@ -251,6 +257,7 @@ public class Nivel2 extends AppCompatActivity {
             if(elresultado2==2){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
 
@@ -264,7 +271,7 @@ public class Nivel2 extends AppCompatActivity {
                     bplay1.setImageResource(R.drawable.mute_blanco);
                 }
             }
-            if(elresultado2==2){
+            if(elresultado2==1){
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -281,7 +288,7 @@ public class Nivel2 extends AppCompatActivity {
                 aNivel3();
 
             }
-            if(elresultado3==2){
+            if(elresultado3==1){
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -303,8 +310,9 @@ public class Nivel2 extends AppCompatActivity {
 
     public void aNivel3(){
 
-        Intent intent = new Intent (this, Nivel3.class);
-        startActivityForResult(intent, 0);
+        Intent intent = new Intent (this, Nivel3.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        finish();
 
     }
 

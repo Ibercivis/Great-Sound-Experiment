@@ -19,9 +19,12 @@ public class Nivel1 extends AppCompatActivity {
     public ImageView bplay1, bplay2;
     int cantidadAudios=13;
     int sonando = 0;
+    int sonando2= 0;
+    int sonando1 = 0;
     Button voto1, voto2;
     public Resultado result1, result2, result3;
     int partidas = 1;
+    ImageView barra;
 
 
 
@@ -33,8 +36,10 @@ public class Nivel1 extends AppCompatActivity {
         bplay2 = findViewById(R.id.boton2);
         voto1 = findViewById(R.id.audio1);
         voto2 = findViewById(R.id.audio2);
-        int int1;
+        voto1.setVisibility(View.GONE);
+        voto2.setVisibility(View.GONE);
         result1=generarPares(1);
+        barra = findViewById(R.id.barraprogreso);
 
 
 
@@ -83,6 +88,13 @@ public class Nivel1 extends AppCompatActivity {
 
     public void play1(View view) {
 
+        sonando1=1;
+
+        if(sonando2==1){
+            voto1.setVisibility(View.VISIBLE);
+            voto2.setVisibility(View.VISIBLE);
+        }
+
         if(mp1.isPlaying()==false){
 
             bplay1.setImageResource(R.drawable.volume_azul);
@@ -92,12 +104,14 @@ public class Nivel1 extends AppCompatActivity {
             mp1.setVolume(1,1);
             mp2.setVolume(0, 0);
             sonando = 1;
+
         }
 
 
 
         if(mp1.isPlaying()==true){
             if(sonando==1){
+
 
             }
             if(sonando==2){
@@ -106,11 +120,19 @@ public class Nivel1 extends AppCompatActivity {
                 mp1.setVolume(1,1);
                 mp2.setVolume(0, 0);
                 sonando=1;
+
             }
         }
     }
 
     public void play2(View view) {
+
+        sonando2 = 1;
+
+        if(sonando1==1){
+            voto1.setVisibility(View.VISIBLE);
+            voto2.setVisibility(View.VISIBLE);
+        }
 
         if(mp2.isPlaying()==false){
             sonando = 2;
@@ -121,12 +143,14 @@ public class Nivel1 extends AppCompatActivity {
             mp1.setVolume(0,0);
             mp2.setVolume(1, 1);
 
+
         }
 
 
 
         if(mp2.isPlaying()==true){
             if(sonando==2){
+
 
             }
             if(sonando==1){
@@ -135,6 +159,8 @@ public class Nivel1 extends AppCompatActivity {
                 mp1.setVolume(0,0);
                 mp2.setVolume(1, 1);
                 sonando=2;
+
+
             }
         }
     }
@@ -150,6 +176,7 @@ public class Nivel1 extends AppCompatActivity {
         if(elresultado1==1){
 
             Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+            barra.setImageResource(R.drawable.barranivel2);
             toast1.setGravity(Gravity.CENTER, 0, 0);
             toast1.show();
             result2=generarPares(1);
@@ -175,6 +202,7 @@ public class Nivel1 extends AppCompatActivity {
             if(elresultado2==1){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(1);
@@ -225,6 +253,7 @@ public class Nivel1 extends AppCompatActivity {
             if(elresultado1==2){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result2=generarPares(1);
@@ -251,6 +280,7 @@ public class Nivel1 extends AppCompatActivity {
             if(elresultado2==2){
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
+                barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(1);
@@ -308,8 +338,9 @@ public class Nivel1 extends AppCompatActivity {
 
     public void aNivel2(){
 
-        Intent intent = new Intent (this, Nivel2.class);
-        startActivityForResult(intent, 0);
+        Intent intent = new Intent (this, Nivel2.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        finish();
 
     }
 

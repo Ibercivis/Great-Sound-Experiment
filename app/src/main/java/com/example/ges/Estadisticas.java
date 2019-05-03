@@ -14,7 +14,7 @@ public class Estadisticas extends AppCompatActivity {
     }
 
     public void aJuego(View view){
-        Intent intent = new Intent (this, Nivel1.class);
+        Intent intent = new Intent (this, PreJuego.class);
         startActivityForResult(intent, 0);
     }
 }

@@ -19,13 +19,25 @@
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"/>
 
+    //Barra de progreso
+
+    <ImageView
+
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:id="@+id/barraprogreso"
+        android:layout_below="@id/titulo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/barranivel1"/>
+
     // Zona Amarilla de ESCUCHA
+    
 
     <LinearLayout
         android:id="@+id/espacioaudios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titulo"
+        android:layout_below="@id/barraprogreso"
         android:layout_marginTop="30dp"
         android:orientation="vertical"
         android:background="#40ffcc00">
@@ -56,8 +68,7 @@
                 android:id="@+id/opciona"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="play1">
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/boton1"
@@ -67,13 +78,15 @@
                     android:layout_centerVertical="true"
                     android:clickable="true"
                     android:src="@drawable/mute_blanco"
+                    android:onClick="play1"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:text="Audio 1"
                     android:gravity="center"
-                    android:layout_toRightOf="@id/boton1"/>
+                    android:layout_toRightOf="@id/boton1"
+                    android:onClick="play1"/>
 
             </RelativeLayout>
             <RelativeLayout
@@ -81,7 +94,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="play2">
+                >
 
                 <ImageView
                     android:id="@+id/boton2"
@@ -90,13 +103,15 @@
                     android:layout_marginLeft="24dp"
                     android:layout_centerVertical="true"
                     android:clickable="true"
-                    android:src="@drawable/mute_blanco"/>
+                    android:src="@drawable/mute_blanco"
+                    android:onClick="play2"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:text="Audio 2"
                     android:gravity="center"
-                    android:layout_toRightOf="@id/boton2"/>
+                    android:layout_toRightOf="@id/boton2"
+                    android:onClick="play2"/>
 
             </RelativeLayout>
 
@@ -110,7 +125,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/espacioaudios"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:orientation="vertical">
 
         <TextView
