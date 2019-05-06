@@ -1,30 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registro"
-    android:background="@drawable/fondo_auriculares">
+    android:background="@drawable/fondobn">
 
-    <View
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="64dp"
-        android:background="@drawable/borde_redondo_secundario"
-        />
+        android:layout_marginBottom="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borde_redondo" />
 
     <ImageView
-        android:id="@+id/logoplay"
-        android:layout_marginTop="70dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="LogoPlay"
-        app:srcCompat="@drawable/iconoplay" />
+        android:id="@+id/imageView"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="LogoGSE"
+        app:srcCompat="@drawable/logobueno" />
+
 
     <TextView
         android:id="@+id/registrate"
@@ -34,15 +48,17 @@
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="160dp"
-        android:textSize="18dp"/>
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_below="@id/imageView"/>
 
     <LinearLayout
         android:id="@+id/email"
+        android:layout_below="@id/registrate"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="8dp"
         android:layout_marginLeft="50dp">
 
         <ImageView
@@ -69,10 +85,10 @@
 
     <LinearLayout
         android:id="@+id/usuario"
+        android:layout_below="@id/email"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:layout_marginTop="300dp"
         android:layout_marginLeft="50dp">
 
         <ImageView
@@ -99,10 +115,10 @@
 
     <LinearLayout
         android:id="@+id/contraseña"
+        android:layout_below="@id/usuario"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:layout_marginTop="360dp"
         android:layout_marginLeft="50dp">
 
         <ImageView
@@ -128,16 +144,144 @@
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="240dp"
+    <LinearLayout
+        android:id="@+id/infoextra"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/contraseña"
+        android:layout_margin="16dp"
+        android:background="@drawable/boton_redondo_inicio"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Sexo:"/>
+
+            <Spinner
+                android:id="@+id/spinnersexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"></Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Edad:"/>
+
+            <Spinner
+                android:id="@+id/spinneredad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"></Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Formación musical:"/>
+
+            <Spinner
+                android:id="@+id/spinnerformacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"></Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Tipo de auriculares:"/>
+
+            <Spinner
+                android:id="@+id/spinnerauriculares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"></Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Rango de precio:"/>
+
+            <Spinner
+                android:id="@+id/spinnerprecios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"></Spinner>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/boton_redondo_inicio"
         android:text="Aceptar"
         android:clickable="true"
         android:textStyle="bold" />
+
 
 
 </RelativeLayout>

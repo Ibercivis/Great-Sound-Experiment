@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Nivel5"
-    android:background="@drawable/fondo_nivel_1">
+    android:background="@drawable/fondojuegonivel5">
 
     //Cabecera - Título
 
@@ -39,7 +39,7 @@
         android:layout_below="@id/barraprogreso"
         android:layout_marginTop="30dp"
         android:orientation="vertical"
-        android:background="#40ffcc00">
+        android:background="#40003333">
 
         <TextView
             android:layout_width="wrap_content"
@@ -185,7 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/juego_azul"/>
+                android:src="@drawable/juego_blanco"/>
         </LinearLayout>
 
         <LinearLayout
@@ -196,7 +196,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/perfil_gris"/>
+                android:src="@drawable/perfil_gris"
+                android:onClick="aPerfil"/>
         </LinearLayout>
 
     </LinearLayout>

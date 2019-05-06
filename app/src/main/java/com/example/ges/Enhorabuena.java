@@ -14,12 +14,20 @@ public class Enhorabuena extends AppCompatActivity {
     }
 
     public void aJuego(View view){
-        Intent intent = new Intent (this, Nivel1.class);
-        startActivityForResult(intent, 0);
+        Intent intent = new Intent (this, PreJuego.class);
+        startActivity(intent);
+        finish();
     }
 
     public void aStats(View view){
         Intent intent = new Intent (this, Estadisticas.class);
-        startActivityForResult(intent, 0);
+        startActivity(intent);
+        finish();
+    }
+
+    public void aPerfil(View view){
+        Intent intent = new Intent (this, Perfil.class);
+        startActivity(intent);
+        finish();
     }
 }

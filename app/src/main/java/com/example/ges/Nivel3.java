@@ -318,6 +318,13 @@ public class Nivel3 extends AppCompatActivity {
 
     }
 
+
+    public void aPerfil(View view){
+        Intent intent = new Intent (this, Perfil.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
 
 

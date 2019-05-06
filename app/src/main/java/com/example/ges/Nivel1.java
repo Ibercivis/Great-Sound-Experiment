@@ -344,6 +344,19 @@ public class Nivel1 extends AppCompatActivity {
 
     }
 
+    public void aJuego(View view){
+        Intent intent = new Intent (this, Nivel1.class);
+        startActivity(intent);
+        finish();
+    }
+
+
+    public void aPerfil(View view){
+        Intent intent = new Intent (this, Perfil.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
 
 

@@ -1,16 +1,18 @@
 package com.example.ges;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class Registro extends AppCompatActivity {
+public class Perfil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
+        setContentView(R.layout.activity_perfil);
         Spinner sexospinner = (Spinner) findViewById(R.id.spinnersexo);
         Spinner edadspinner = (Spinner) findViewById(R.id.spinneredad);
         Spinner cascosspinner = (Spinner) findViewById(R.id.spinnerauriculares);
@@ -40,5 +42,17 @@ public class Registro extends AppCompatActivity {
                 R.array.formacion_array, android.R.layout.simple_spinner_item);
         adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         formaspinner.setAdapter(adapter5);
+    }
+
+    public void aJuego(View view){
+        Intent intent = new Intent (this, PreJuego.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void aStats(View view){
+        Intent intent = new Intent (this, Estadisticas.class);
+        startActivity(intent);
+        finish();
     }
 }

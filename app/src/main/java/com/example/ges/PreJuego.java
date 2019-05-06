@@ -15,6 +15,19 @@ public class PreJuego extends AppCompatActivity {
 
     public void aJuego(View view){
         Intent intent = new Intent (this, Nivel1.class);
-        startActivityForResult(intent, 0);
+        startActivity(intent);
+        finish();
+    }
+
+    public void aStats(View view){
+        Intent intent = new Intent (this, Estadisticas.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void aPerfil(View view){
+        Intent intent = new Intent (this, Perfil.class);
+        startActivity(intent);
+        finish();
     }
 }

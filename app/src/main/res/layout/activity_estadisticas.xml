@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Estadisticas"
-    android:background="@drawable/fondo_nivel_1">
+    android:background="#333333">
 
     //Cabecera - Título
 
@@ -97,7 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/perfil_gris"/>
+                android:src="@drawable/perfil_gris"
+                android:onClick="aPerfil"/>
         </LinearLayout>
 
     </LinearLayout>

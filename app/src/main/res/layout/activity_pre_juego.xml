@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PreJuego"
-    android:background="@drawable/fondo_nivel_1">
+    android:background="#333333">
 
     //Cabecera - Título
 
@@ -68,6 +68,7 @@
     android:layout_below="@id/espacioaudios"
     android:layout_marginTop="80dp"
     android:layout_centerHorizontal="true"
+    android:textSize="16dp"
     android:onClick="aJuego"/>
 
 
@@ -90,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:src="@drawable/stats_gris"
+                android:onClick="aStats"
                 />
         </LinearLayout>
 
@@ -113,7 +115,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/perfil_gris"/>
+                android:src="@drawable/perfil_gris"
+                android:onClick="aPerfil"/>
         </LinearLayout>
 
     </LinearLayout>

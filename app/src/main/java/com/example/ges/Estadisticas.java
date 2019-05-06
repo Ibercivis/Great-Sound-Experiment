@@ -15,6 +15,14 @@ public class Estadisticas extends AppCompatActivity {
 
     public void aJuego(View view){
         Intent intent = new Intent (this, PreJuego.class);
-        startActivityForResult(intent, 0);
+        startActivity(intent);
+        finish();
+    }
+
+
+    public void aPerfil(View view){
+        Intent intent = new Intent (this, Perfil.class);
+        startActivity(intent);
+        finish();
     }
 }

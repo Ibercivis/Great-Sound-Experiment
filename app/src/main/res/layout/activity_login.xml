@@ -113,9 +113,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:background="@drawable/boton_redondo_inicio"
-        android:text="Aceptar"
+        android:text="ENTRAR"
+        android:textSize="16dp"
         android:clickable="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="aDentro"/>
 
 
 </RelativeLayout>
