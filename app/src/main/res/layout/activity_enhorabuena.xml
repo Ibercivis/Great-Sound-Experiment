@@ -13,7 +13,7 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¡Enhorabuena!"
+        android:text="@string/enhorabuena"
         android:textStyle="bold"
         android:textSize="40dp"
         android:layout_marginTop="40dp"
@@ -60,7 +60,7 @@
     <LinearLayout
         android:id="@+id/barrafondo"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:elevation="5dp">
@@ -68,36 +68,39 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/stats_gris"
+                android:src="@drawable/stats_gris_def"
                 android:onClick="aStats"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/juego_azul"
+                android:src="@drawable/juego_blanco_def"
                 android:onClick="aJuego"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/perfil_gris"
+                android:src="@drawable/perfil_gris_def"
                 android:onClick="aPerfil"/>
         </LinearLayout>
 

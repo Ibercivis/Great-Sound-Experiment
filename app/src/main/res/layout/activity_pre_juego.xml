@@ -13,7 +13,7 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="El Reto"
+        android:text="@string/reto"
         android:textStyle="bold"
         android:textSize="40dp"
         android:layout_marginTop="40dp"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿Estás preparad@ para enfrentarte al reto?"
+            android:text="@string/reto1"
             android:textStyle="bold"
             android:textSize="16dp"
             android:layout_gravity="center"
@@ -44,14 +44,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Se te van a presentar 2 audios de distinta calidad. Primero deberás escuchar cada uno; después, elegir cuál de los dos suena mejor."
+            android:text="@string/reto2"
             android:layout_marginBottom="4dp"/>
         <TextView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Recuerda utilizar tus auriculares para poder apreciar las diferencias. ¡Cada nivel es más difícil que el anterior!"
+            android:text="@string/reto3"
             android:layout_marginBottom="24dp"/>
 
 
@@ -62,8 +62,8 @@
 
 <Button
     android:layout_width="260dp"
-    android:layout_height="40dp"
-    android:text="JUGAR"
+    android:layout_height="35dp"
+    android:text="@string/reto4"
     android:background="@drawable/boton_redondo_inicio"
     android:layout_below="@id/espacioaudios"
     android:layout_marginTop="80dp"
@@ -77,7 +77,7 @@
     <LinearLayout
         android:id="@+id/barrafondo"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:elevation="5dp">
@@ -85,12 +85,13 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/stats_gris"
+                android:src="@drawable/stats_gris_def"
                 android:onClick="aStats"
                 />
         </LinearLayout>
@@ -98,24 +99,26 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/juego_azul"
+                android:src="@drawable/juego_blanco_def"
                 />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/perfil_gris"
+                android:src="@drawable/perfil_gris_def"
                 android:onClick="aPerfil"/>
         </LinearLayout>
 

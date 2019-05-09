@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">GES</string>
+
+    <string name="claim1">¿Eres capaz de distinguir qué audio suena mejor?</string>
+    <string name="claim2">Escucha, aprende, compite</string>
+    <string name="registro">REGÍSTRATE</string>
+    <string name="login">IDENTIFÍCATE</string>
+
+    <string name="enhorabuena">¡Enhorabuena!</string>
+
+    <string name="level1">Nivel 1</string>
+    <string name="level2">Nivel 2</string>
+    <string name="level3">Nivel 3</string>
+    <string name="level4">Nivel 4</string>
+    <string name="level5">Nivel 5</string>
+    <string name="claim3">Pulsa para escuchar los audios</string>
+    <string name="claim4">Cambia entre los audios para notar las diferencias entre ellos</string>
+    <string name="claim5">¿Estás preparado para elegir el audio que mejor suena?</string>
+
+    <string name="stats">Estadísticas</string>
+    <string name="stats1">Aquí puedes consultar tus estadísticas</string>
+    <string name="stats2">Compites contra todos, pero sobre todo contra ti mismo</string>
+
+    <string name="perfil">Perfil</string>
+    <string name="userpro">Nombre de usuario:</string>
+    <string name="claimpro">Completa tu perfil para elaborar las estadísticas</string>
+    <string name="passpro">Cambiar Contraseña</string>
+    <string name="pro1">Sexo:</string>
+    <string name="pro2">Edad:</string>
+    <string name="pro3">Formación musical:</string>
+    <string name="pro4">Tipo de auriculares:</string>
+    <string name="pro5">Rango de precio:</string>
+    <string name="pro6">Aplicar cambios</string>
+
+    <string name="reto">El Reto</string>
+    <string name="reto1">¿Aceptas el reto?</string>
+    <string name="reto2">Se te van a presentar 2 audios de distinta calidad. Primero deberás escuchar cada uno; después, elegir cuál de los dos suena mejor</string>
+    <string name="reto3">Recuerda utilizar tus auriculares para poder apreciar las diferencias. ¡Cada nivel es más difícil que el anterior!</string>
+    <string name="reto4">Jugar</string>
+
+    <string name="email">Correo electrónico</string>
+    <string name="usersign">Nombre de usuario</string>
+    <string name="passsign">Contraseña</string>
+
+
+
+</resources>

@@ -44,7 +44,7 @@
         android:id="@+id/registrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="REGÍSTRATE"
+        android:text="@string/registro"
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
@@ -62,24 +62,26 @@
         android:layout_marginLeft="50dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/iconomail"
             android:layout_gravity="center"
             />
 
         <EditText
             android:id="@+id/txtemail"
+
             android:layout_marginLeft="20dp"
-            android:layout_width="200dp"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Correo electrónico"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:singleLine="true"
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:focusable="false"/>
 
     </LinearLayout>
 
@@ -92,8 +94,8 @@
         android:layout_marginLeft="50dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/iconousuario"
             android:layout_gravity="center"
             />
@@ -101,15 +103,17 @@
         <EditText
             android:id="@+id/txtusuario"
             android:layout_marginLeft="20dp"
-            android:layout_width="200dp"
+
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Usuario"
+            android:hint="@string/usersign"
             android:inputType="text"
             android:singleLine="true"
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:focusable="false"/>
 
     </LinearLayout>
 
@@ -122,25 +126,27 @@
         android:layout_marginLeft="50dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/iconocontrasena"
             android:layout_gravity="center"
             />
 
         <EditText
             android:id="@+id/txtcontraseña"
+
             android:layout_marginLeft="20dp"
-            android:layout_width="200dp"
+            android:layout_width="220dp"
             android:paddingRight="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Contraseña"
+            android:hint="@string/passsign"
             android:inputType="textPassword"
             android:singleLine="true"
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:focusable="false"/>
 
     </LinearLayout>
 
@@ -272,7 +278,7 @@
 
     <Button
         android:layout_width="240dp"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"

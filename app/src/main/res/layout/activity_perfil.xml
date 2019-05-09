@@ -22,7 +22,7 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Perfil"
+        android:text="@string/perfil"
         android:textStyle="bold"
         android:textSize="40dp"
         android:layout_marginTop="40dp"
@@ -49,7 +49,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="Completa tu perfil para elaborar las estadísticas"
+            android:text="@string/claimpro"
             android:layout_marginBottom="24dp"/>
 
 
@@ -77,7 +77,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre de usuario:"
+            android:text="@string/userpro"
             android:textStyle="bold"
             />
 
@@ -96,7 +96,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:layout_gravity="center_horizontal"
-            android:text="Cambiar Contraseña"
+            android:text="@string/passpro"
             android:background="@drawable/boton_redondo_inicio"/>
 
     </LinearLayout>
@@ -113,7 +113,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="24dp"
         android:orientation="horizontal"
         android:layout_marginTop="8dp">
 
@@ -121,11 +121,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Sexo:"/>
+            android:text="@string/pro1"/>
 
         <Spinner
             android:id="@+id/spinnersexo"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"></Spinner>
 
@@ -134,7 +134,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="24dp"
             android:orientation="horizontal"
             android:layout_marginTop="8dp">
 
@@ -142,11 +142,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Edad:"/>
+                android:text="@string/pro2"/>
 
             <Spinner
                 android:id="@+id/spinneredad"
-                android:layout_width="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"></Spinner>
 
@@ -155,7 +155,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="24dp"
             android:orientation="horizontal"
             android:layout_marginTop="8dp">
 
@@ -163,11 +163,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Formación musical:"/>
+                android:text="@string/pro3"/>
 
             <Spinner
                 android:id="@+id/spinnerformacion"
-                android:layout_width="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"></Spinner>
 
@@ -176,20 +176,19 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="24dp"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp"
-            >
+            android:layout_marginTop="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Tipo de auriculares:"/>
+                android:text="@string/pro4"/>
 
             <Spinner
                 android:id="@+id/spinnerauriculares"
-                android:layout_width="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"></Spinner>
 
@@ -198,7 +197,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="24dp"
             android:orientation="horizontal"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
@@ -207,11 +206,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Rango de precio:"/>
+                android:text="@string/pro5"/>
 
             <Spinner
                 android:id="@+id/spinnerprecios"
-                android:layout_width="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"></Spinner>
 
@@ -225,7 +224,7 @@
         android:id="@+id/aceptarcambios"
         android:layout_below="@id/infoextra"
         android:layout_centerHorizontal="true"
-        android:text="APLICAR CAMBIOS"
+        android:text="@string/pro6"
         android:background="@drawable/boton_redondo_inicio"/>
 
 
@@ -237,7 +236,7 @@
     <LinearLayout
         android:id="@+id/barrafondo"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:elevation="5dp">
@@ -245,36 +244,39 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/stats_gris"
+                android:src="@drawable/stats_gris_def"
                 />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/juego_gris"
+                android:src="@drawable/juego_gris_def"
                 android:onClick="aJuego"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/perfil_azul"/>
+                android:src="@drawable/perfil_blanco_def"/>
         </LinearLayout>
 
     </LinearLayout>

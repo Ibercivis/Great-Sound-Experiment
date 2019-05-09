@@ -1,6 +1,47 @@
 <resources>
     <string name="app_name">GES</string>
 
+    <string name="claim1">Are you able to distinguish which audio sounds better?</string>
+    <string name="claim2">Listen, learn, compete</string>
+    <string name="registro">SIGN UP</string>
+    <string name="login">LOG IN</string>
+
+    <string name="enhorabuena">¡Congratulations!</string>
+
+    <string name="level1">Level 1</string>
+    <string name="level2">Level 2</string>
+    <string name="level3">Level 3</string>
+    <string name="level4">Level 4</string>
+    <string name="level5">Level 5</string>
+    <string name="claim3">Press to listen to the audios</string>
+    <string name="claim4">Switch between audios to notice the differences between them</string>
+    <string name="claim5">Are you ready to choose the audio that sounds best?</string>
+
+    <string name="stats">Statistics</string>
+    <string name="stats1">Here you can check your stats</string>
+    <string name="stats2">You compete against everyone, but especially against yourself</string>
+
+    <string name="perfil">Profile</string>
+    <string name="userpro">Username:</string>
+    <string name="claimpro">Complete your profile to prepare statistics</string>
+    <string name="passpro">Change password</string>
+    <string name="pro1">Sex:</string>
+    <string name="pro2">Age:</string>
+    <string name="pro3">Musical formation:</string>
+    <string name="pro4">Headphones:</string>
+    <string name="pro5">Price range:</string>
+    <string name="pro6">Apply changes</string>
+
+    <string name="reto">The Challenge</string>
+    <string name="reto1">Do you accept the challenge?</string>
+    <string name="reto2">You will find 2 audios of different quality. First you must listen to each one; Then, choose which of the two sounds better.</string>
+    <string name="reto3">Remember to use your headphones to appreciate the differences. Every level is harder that the previous one!</string>
+    <string name="reto4">Play</string>
+
+    <string name="email">E-mail</string>
+    <string name="usersign">Username</string>
+    <string name="passsign">Password</string>
+
 
 
 </resources>
