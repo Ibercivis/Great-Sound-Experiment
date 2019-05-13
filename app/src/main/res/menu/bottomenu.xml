@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/estadisticasmenu"
+        android:title="@string/item1"
+        android:icon="@drawable/stats_gris_def"
+        />
+
+    <item android:id="@+id/jugarmenu"
+        android:title="@string/item2"
+        android:icon="@drawable/juego_gris_def"
+        />
+
+    <item android:id="@+id/perfilmenu"
+        android:title="@string/item3"
+        android:icon="@drawable/perfil_gris_def"
+        />
+
+</menu>

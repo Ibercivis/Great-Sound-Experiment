@@ -47,6 +47,8 @@
     <string name="usersign">Nombre de usuario</string>
     <string name="passsign">Contraseña</string>
 
-
+    <string name="item1">Estadísticas</string>
+    <string name="item2">El Reto</string>
+    <string name="item3">Perfil</string>
 
 </resources>
