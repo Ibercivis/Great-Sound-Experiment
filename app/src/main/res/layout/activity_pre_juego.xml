@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/reto"
         android:textStyle="bold"
+        android:textColor="#ffffff"
         android:textSize="40dp"
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"/>

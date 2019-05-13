@@ -32,6 +32,11 @@
     <string name="pro5">Price range:</string>
     <string name="pro6">Apply changes</string>
 
+    <string name="login1">LOG IN</string>
+    <string name="login2">Username</string>
+    <string name="login3">Password</string>
+    <string name="login4">APPLY</string>
+
     <string name="reto">The Challenge</string>
     <string name="reto1">Do you accept the challenge?</string>
     <string name="reto2">You will find 2 audios of different quality. First you must listen to each one; Then, choose which of the two sounds better.</string>

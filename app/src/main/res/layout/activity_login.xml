@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login"
-    android:background="@drawable/fondobn">
+    android:background="@drawable/fondo_auriculares">
 
     <View
         android:id="@+id/view"
@@ -33,7 +33,7 @@
         android:id="@+id/identificate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IDENTIFÍCATE"
+        android:text="@string/login1"
         android:layout_below="@id/imageView"
         android:textColor="#FFFF"
         android:textStyle="bold"
@@ -65,13 +65,13 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Usuario"
+            android:hint="@string/login2"
             android:inputType="text"
             android:singleLine="true"
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
             android:visibility="visible"
-            android:focusable="false"/>
+            />
 
     </LinearLayout>
 
@@ -98,13 +98,13 @@
             android:paddingRight="50dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Contraseña"
+            android:hint="@string/login3"
             android:inputType="textPassword"
             android:singleLine="true"
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
             android:visibility="visible"
-            android:focusable="false"/>
+           />
 
     </LinearLayout>
 
@@ -115,7 +115,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:background="@drawable/boton_redondo_inicio"
-        android:text="ENTRAR"
+        android:text="@string/login4"
         android:textSize="16dp"
         android:clickable="true"
         android:textStyle="bold"

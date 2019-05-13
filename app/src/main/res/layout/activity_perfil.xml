@@ -19,6 +19,7 @@
     //Cabecera - Título
 
     <TextView
+        android:textColor="#ffffff"
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,9 +36,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/titulo"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
-        android:background="#40ffcc00">
+       >
 
 
         <TextView
@@ -50,7 +51,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:text="@string/claimpro"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="16dp"/>
 
 
 
@@ -61,18 +62,19 @@
     <LinearLayout
         android:id="@+id/infouser"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/espacioclaim"
         android:layout_margin="16dp"
-        android:background="@drawable/boton_redondo_inicio"
-        android:orientation="vertical">
+        android:background="@drawable/marco_redondo"
+        android:orientation="vertical"
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:padding="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,13 +93,7 @@
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/passpro"
-            android:background="@drawable/boton_redondo_inicio"/>
+
 
     </LinearLayout>
 
@@ -107,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/infouser"
         android:layout_margin="16dp"
-        android:background="@drawable/boton_redondo_inicio"
+        android:background="@drawable/marco_redondo"
         android:orientation="vertical">
 
     <LinearLayout
@@ -117,17 +113,27 @@
         android:orientation="horizontal"
         android:layout_marginTop="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="@string/pro1"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Spinner
-            android:id="@+id/spinnersexo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"></Spinner>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/pro1"
+                android:layout_alignParentLeft="true"/>
+
+            <Spinner
+                android:id="@+id/spinnersexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textAlignment="viewEnd"></Spinner>
+
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 
@@ -138,38 +144,27 @@
             android:orientation="horizontal"
             android:layout_marginTop="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/pro2"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Spinner
-                android:id="@+id/spinneredad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro2"
+                    android:layout_alignParentLeft="true"/>
 
-        </LinearLayout>
+                <Spinner
+                    android:id="@+id/spinneredad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="viewEnd"></Spinner>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/pro3"/>
 
-            <Spinner
-                android:id="@+id/spinnerformacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
 
         </LinearLayout>
 
@@ -180,17 +175,58 @@
             android:orientation="horizontal"
             android:layout_marginTop="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/pro4"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Spinner
-                android:id="@+id/spinnerauriculares"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro3"
+                    android:layout_alignParentLeft="true"/>
+
+                <Spinner
+                    android:id="@+id/spinnerformacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="viewEnd"></Spinner>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro4"
+                    android:layout_alignParentLeft="true"/>
+
+                <Spinner
+                    android:id="@+id/spinnerauriculares"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="viewEnd"></Spinner>
+
+            </RelativeLayout>
+
+
 
         </LinearLayout>
 
@@ -202,17 +238,26 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="@string/pro5"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Spinner
-                android:id="@+id/spinnerprecios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro5"/>
+
+                <Spinner
+                    android:id="@+id/spinnerprecios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="viewEnd"></Spinner>
+
+            </RelativeLayout>
+
+
 
         </LinearLayout>
 
@@ -220,7 +265,7 @@
 
     <Button
         android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         android:id="@+id/aceptarcambios"
         android:layout_below="@id/infoextra"
         android:layout_centerHorizontal="true"
@@ -251,6 +296,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:src="@drawable/stats_gris_def"
+                android:onClick="aStats"
                 />
         </LinearLayout>
 

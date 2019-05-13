@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="edades_array">
-        <item>Menos de 20</item>
-        <item>21-30</item>
-        <item>31-40</item>
-        <item>41-50</item>
-        <item>51-60</item>
-        <item>61-70</item>
-        <item>71-80</item>
-        <item>Más de 80</item>
+        <item>Menos de 20  </item>
+        <item>21-30        </item>
+        <item>31-40        </item>
+        <item>41-50        </item>
+        <item>51-60        </item>
+        <item>61-70        </item>
+        <item>71-80        </item>
+        <item>Más de 80    </item>
     </string-array>
 
     <string-array name="formacion_array">
-        <item>Ninguna</item>
+        <item>Ninguna      </item>
         <item>En el colegio</item>
-        <item>Extraescolar</item>
+        <item>Extraescolar </item>
         <item>Conservatorio</item>
     </string-array>
 
     <string-array name="sexo_array">
-        <item>Hombre</item>
-        <item>Mujer</item>
-        <item>Prefiero no contestar</item>
+        <item>Hombre       </item>
+        <item>Mujer        </item>
+        <item>NS/NC        </item>
     </string-array>
 
     <string-array name="tipocascos_array">
-        <item>In-Ear</item>
-        <item>Diadema</item>
-        <item>In-Ear Bluetooth</item>
-        <item>Diadema Bluetooth</item>
-        <item>No lo sé</item>
+        <item>In-Ear       </item>
+        <item>Diadema      </item>
+        <item>In-Ear BT    </item>
+        <item>Diadema BT   </item>
+        <item>NS/NC        </item>
     </string-array>
 
     <string-array name="precios_array">
-        <item>Menos de 10€</item>
-        <item>10€-20€</item>
-        <item>20€-50€</item>
-        <item>50€-100€</item>
-        <item>Más de 100€</item>
-        <item>No lo sé</item>
+        <item>Menos de 10€ </item>
+        <item>10€-20€      </item>
+        <item>20€-50€      </item>
+        <item>50€-100€     </item>
+        <item>Más de 100€  </item>
+        <item>NS/NC        </item>
     </string-array>
 </resources>
 

@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registro"
-    android:background="@drawable/fondobn">
+    android:background="@drawable/fondo_auriculares">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -81,7 +81,7 @@
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
             android:visibility="visible"
-            android:focusable="false"/>
+            />
 
     </LinearLayout>
 
@@ -103,7 +103,6 @@
         <EditText
             android:id="@+id/txtusuario"
             android:layout_marginLeft="20dp"
-
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -113,7 +112,7 @@
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
             android:visibility="visible"
-            android:focusable="false"/>
+            />
 
     </LinearLayout>
 
@@ -146,7 +145,7 @@
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
             android:visibility="visible"
-            android:focusable="false"/>
+            />
 
     </LinearLayout>
 
@@ -167,38 +166,27 @@
             android:orientation="horizontal"
             android:layout_marginTop="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Sexo:"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Spinner
-                android:id="@+id/spinnersexo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro1"
+                    android:layout_alignParentLeft="true"/>
 
-        </LinearLayout>
+                <Spinner
+                    android:id="@+id/spinnersexo"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"></Spinner>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Edad:"/>
 
-            <Spinner
-                android:id="@+id/spinneredad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
 
         </LinearLayout>
 
@@ -209,17 +197,58 @@
             android:orientation="horizontal"
             android:layout_marginTop="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Formación musical:"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Spinner
-                android:id="@+id/spinnerformacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro2"
+                    android:layout_alignParentLeft="true"/>
+
+                <Spinner
+                    android:id="@+id/spinneredad"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"></Spinner>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro3"
+                    android:layout_alignParentLeft="true"/>
+
+                <Spinner
+                    android:id="@+id/spinnerformacion"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"></Spinner>
+
+            </RelativeLayout>
+
+
 
         </LinearLayout>
 
@@ -231,17 +260,27 @@
             android:layout_marginTop="8dp"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Tipo de auriculares:"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Spinner
-                android:id="@+id/spinnerauriculares"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro4"
+                    android:layout_alignParentLeft="true"/>
+
+                <Spinner
+                    android:id="@+id/spinnerauriculares"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"></Spinner>
+
+            </RelativeLayout>
+
+
 
         </LinearLayout>
 
@@ -253,17 +292,27 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Rango de precio:"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Spinner
-                android:id="@+id/spinnerprecios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"></Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro5"
+                    android:layout_alignParentLeft="true"/>
+
+                <Spinner
+                    android:id="@+id/spinnerprecios"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"></Spinner>
+
+            </RelativeLayout>
+
+
 
         </LinearLayout>
 
@@ -284,7 +333,7 @@
         android:layout_marginBottom="40dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/boton_redondo_inicio"
-        android:text="Aceptar"
+        android:text="@string/login4"
         android:clickable="true"
         android:textStyle="bold" />
 

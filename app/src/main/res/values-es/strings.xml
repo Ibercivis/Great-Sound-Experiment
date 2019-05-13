@@ -21,6 +21,11 @@
     <string name="stats1">Aquí puedes consultar tus estadísticas</string>
     <string name="stats2">Compites contra todos, pero sobre todo contra ti mismo</string>
 
+    <string name="login1">IDENTIFÍCATE</string>
+    <string name="login2">Usuario</string>
+    <string name="login3">Contraseña</string>
+    <string name="login4">ACEPTAR</string>
+
     <string name="perfil">Perfil</string>
     <string name="userpro">Nombre de usuario:</string>
     <string name="claimpro">Completa tu perfil para elaborar las estadísticas</string>

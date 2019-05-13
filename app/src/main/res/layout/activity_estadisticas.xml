@@ -13,6 +13,7 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#ffffff"
         android:text="@string/stats"
         android:textStyle="bold"
         android:textSize="40dp"
@@ -27,8 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/titulo"
         android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        android:background="#40ffcc00">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"/>
         <TextView
-            android:layout_width="230dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
