@@ -23,11 +23,7 @@
         <activity android:name=".Estadisticas" />
         <activity android:name=".Nivel1"></activity>
         <activity android:name=".Jugar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Login"
                   android:configChanges="screenSize|orientation"
@@ -36,7 +32,11 @@
                   android:configChanges="screenSize|orientation"
                   android:windowSoftInputMode="stateHidden" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

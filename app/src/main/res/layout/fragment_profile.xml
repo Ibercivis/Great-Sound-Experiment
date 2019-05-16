@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondoperfil"
+        android:scaleType="centerCrop"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                //Cabecera - Título
+
+                <!--<TextView
+                    android:textColor="#ffffff"
+                    android:id="@+id/titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perfil"
+                    android:textStyle="bold"
+                    android:textSize="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerHorizontal="true"/>-->
+
+                <ImageView
+                    android:id="@+id/titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ffprofile"/>
+
+                // Zona Amarilla de ESCUCHA
+
+                <LinearLayout
+                    android:id="@+id/espacioclaim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titulo"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    >
+
+
+                    <TextView
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:text="@string/claimpro"
+                        android:layout_marginBottom="16dp"/>
+
+
+
+                </LinearLayout>
+
+                //A partir de aquí es el ESPACIO DE RESPUESTA
+
+                <LinearLayout
+                    android:id="@+id/infouser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/espacioclaim"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/marcoperfil"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/userpro"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/textparauser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Username"
+                            android:layout_marginLeft="8dp"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/infoextra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/infouser"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/marcoperfil"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro1"
+                                android:textColor="#ffffff"
+                                android:layout_alignParentLeft="true"/>
+
+                            <Spinner
+                                android:id="@+id/spinnersexo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></Spinner>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro2"
+                                android:layout_alignParentLeft="true"
+                                android:textColor="#ffffff"/>
+
+                            <Spinner
+                                android:id="@+id/spinneredad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></Spinner>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro3"
+                                android:layout_alignParentLeft="true"
+                                android:textColor="#ffffff"/>
+
+                            <Spinner
+                                android:id="@+id/spinnerformacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></Spinner>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro4"
+                                android:layout_alignParentLeft="true"
+                                android:textColor="#ffffff"/>
+
+                            <Spinner
+                                android:id="@+id/spinnerauriculares"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></Spinner>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro5"
+                                android:textColor="#ffffff"/>
+
+                            <Spinner
+                                android:id="@+id/spinnerprecios"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></Spinner>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/aceptarcambios"
+                    android:layout_below="@id/infoextra"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/pro6"
+                    android:textStyle="bold"
+                    android:textColor="#B0278E"
+                    android:background="@drawable/marcobotonsolido"/>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        //A partir de aquí es toda la barra de abajo - JUEGO
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

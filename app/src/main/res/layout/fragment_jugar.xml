@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JugarFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/rosachica">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ffondo4"
+            android:scaleType="centerCrop"/>
+
+        //Cabecera - Título
+
+       <!-- <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reto"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>-->
+
+        <ImageView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ffthechallenge"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp" />
+
+        // Zona Amarilla de ESCUCHA
+
+        <LinearLayout
+            android:id="@+id/espacioaudios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:background="#60cc4742">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reto1"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/reto2"
+                android:layout_marginBottom="4dp"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/reto3"
+                android:layout_marginBottom="24dp"
+                android:textColor="#ffffff"/>
+
+
+
+        </LinearLayout>
+
+        //A partir de aquí es el ESPACIO DE RESPUESTA
+
+        <Button
+            android:id="@+id/botonjugar"
+            android:layout_width="260dp"
+            android:layout_height="35dp"
+            android:text="@string/reto4"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:background="@drawable/marcobotonsolido"
+            android:layout_below="@id/espacioaudios"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp" />
+
+
+        //A partir de aquí es toda la barra de abajo - JUEGO
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

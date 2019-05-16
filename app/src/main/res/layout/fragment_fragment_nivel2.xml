@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentNivel2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondojuegonivel2">
+
+        //Cabecera - Título
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level2"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>
+
+        //Barra de progreso
+
+        <ImageView
+
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:id="@+id/barraprogreso"
+            android:layout_below="@id/titulo"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/barranivel1"/>
+
+        // Zona Amarilla de ESCUCHA
+
+        <LinearLayout
+            android:id="@+id/espacioaudios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/barraprogreso"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:background="#40663300">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/claim3"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"/>
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/claim4"/>
+
+            <LinearLayout
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/opciona"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        android:id="@+id/boton1"
+                        android:layout_width="75dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:src="@drawable/mute_blanco"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Audio 1"
+                        android:gravity="center"
+                        android:layout_toRightOf="@id/boton1"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/opcionb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        android:id="@+id/boton2"
+                        android:layout_width="75dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:src="@drawable/mute_blanco"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Audio 2"
+                        android:gravity="center"
+                        android:layout_toRightOf="@id/boton2"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //A partir de aquí es el ESPACIO DE RESPUESTA
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/espacioaudios"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="@string/claim5"/>
+
+            <Button
+                android:id="@+id/audio1"
+                android:layout_width="200dp"
+                android:text="Audio 1"
+                android:background="@drawable/boton_redondo_inicio"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                />
+
+            <Button
+                android:id="@+id/audio2"
+                android:layout_width="200dp"
+                android:text="Audio 2"
+                android:background="@drawable/boton_redondo_inicio"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        //A partir de aquí es toda la barra de abajo - JUEGO
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

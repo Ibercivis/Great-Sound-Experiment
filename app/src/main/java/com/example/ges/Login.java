@@ -16,7 +16,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void aDentro(View view){
-        Intent intent = new Intent (this, Perfil.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        Intent intent = new Intent (this, Jugar.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
         finish();
     }

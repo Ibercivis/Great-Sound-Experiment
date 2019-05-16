@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/rosachica">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ffondo1"
+            android:scaleType="centerCrop"/>
+
+        //Cabecera - Título
+
+        <!--<TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="@string/stats"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>
+-->
+
+        <ImageView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ffstats"/>
+        // Zona Amarilla de ESCUCHA
+
+        <LinearLayout
+            android:id="@+id/espacioaudios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:background="@drawable/marcoclaim"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stats1"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/stats2"
+                android:layout_marginBottom="24dp"
+                android:textColor="#ffffff"/>
+
+
+
+        </LinearLayout>
+
+        //A partir de aquí es el ESPACIO DE RESPUESTA
+
+
+
+
+        //A partir de aquí es toda la barra de abajo - JUEGO
+
+
+    </RelativeLayout>
+
+</FrameLayout>

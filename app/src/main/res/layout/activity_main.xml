@@ -5,19 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_auriculares"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/homechica"
+        android:scaleType="centerCrop"/>
 
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="125dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="20dp"
 
-        android:background="@drawable/borde_redondo"
+        android:background="@drawable/marcohome"
         />
 
     <ImageView
@@ -27,10 +32,11 @@
         android:layout_height="110dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
         android:contentDescription="LogoGSE"
         app:srcCompat="@drawable/logobueno" />
 
-    <Button
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
         android:id="@+id/button"
         android:layout_width="190dp"
         android:layout_height="35dp"
@@ -39,13 +45,16 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:textSize="16dp"
-       android:layout_centerHorizontal="true"
+        android:layout_centerHorizontal="true"
         android:layout_below="@id/textView2"
         android:layout_marginTop="76dp"
-        android:clickable="true"
-        android:onClick="aRegistro"/>
+        app:spinning_bar_width="4dp"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp" />
 
-    <Button
+
+
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
         android:id="@+id/button2"
         android:layout_width="190dp"
         android:layout_height="35dp"
@@ -57,8 +66,9 @@
         android:layout_below="@id/button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
-        android:clickable="true"
-        android:onClick="aLogin"/>
+        app:spinning_bar_width="4dp"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"/>
 
     <TextView
         android:id="@+id/textView1"

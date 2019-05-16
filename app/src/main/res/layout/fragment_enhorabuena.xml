@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnhorabuenaFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo_nivel_1">
+
+        //Cabecera - Título
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enhorabuena"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>
+
+        // Zona Amarilla de ESCUCHA
+
+        <LinearLayout
+            android:id="@+id/espacioaudios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:background="#40ffcc00">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eres un titán, una bestia..."
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"/>
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="¡Oh, Magnificioso!"
+                android:layout_marginBottom="24dp"/>
+
+
+
+        </LinearLayout>
+
+        //A partir de aquí es el ESPACIO DE RESPUESTA
+
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
