@@ -1,6 +1,8 @@
 package com.example.ges;
 
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -8,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 
 /**
@@ -33,8 +37,8 @@ public class JugarFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                setFragment(new FragmentNivel1());
-
+//                setFragment(new FragmentNivel1());
+        transi1();
             }
         });
 
@@ -46,6 +50,14 @@ public class JugarFragment extends Fragment {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
+
+    }
+
+    public void transi1(){
+
+        Intent intent = new Intent(getContext(), Nivel1.class);
+
+        startActivity(intent);
 
     }
 

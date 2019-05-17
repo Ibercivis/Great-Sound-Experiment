@@ -14,27 +14,27 @@
         android:scaleType="centerCrop"/>
 
 
-    <View
+    <!--<View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="125dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="20dp"
-
         android:background="@drawable/marcohome"
-        />
+        />-->
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="140dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="16dp"
         android:contentDescription="LogoGSE"
-        app:srcCompat="@drawable/logobueno" />
+        app:srcCompat="@drawable/logosolido2"
+        android:transitionName="mainlogo"/>
 
     <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
         android:id="@+id/button"

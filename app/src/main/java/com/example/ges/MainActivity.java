@@ -48,13 +48,14 @@ public class MainActivity extends AppCompatActivity {
     public void aRegistro() {
         Intent intent = new Intent (this, Registro.class);
         startActivity(intent);
-        finish();
+
+
     }
 
     public void aLogin() {
         Intent intent = new Intent (this, Login.class);
         startActivity(intent);
-        finish();
+
 
     }
 

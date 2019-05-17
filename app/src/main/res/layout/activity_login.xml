@@ -13,7 +13,7 @@
         android:src="@drawable/fondoregistros"
         android:scaleType="centerCrop"/>
 
-    <View
+    <!--<View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="125dp"
@@ -31,7 +31,19 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:contentDescription="LogoGSE"
-        app:srcCompat="@drawable/logobueno" />
+        app:srcCompat="@drawable/logobueno" />-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="LogoGSE"
+        app:srcCompat="@drawable/logosolido2"
+        android:transitionName="mainlogo"/>
 
 
     <TextView

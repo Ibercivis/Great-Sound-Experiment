@@ -27,8 +27,9 @@
     android:layout_alignParentBottom="true"
     app:menu="@menu/bottomenu"
     android:elevation="6dp"
-    android:background="@color/rosachica"
+    android:background="@color/rosasplash"
     app:itemIconTint="@color/bottom_nav"
-    app:itemTextColor="@color/bottom_nav"></android.support.design.widget.BottomNavigationView>
+    app:itemTextColor="@color/bottom_nav"
+    ></android.support.design.widget.BottomNavigationView>
 
 </RelativeLayout>
