@@ -1,5 +1,7 @@
 package com.example.ges;
 
+import android.animation.LayoutTransition;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
@@ -9,6 +11,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -25,6 +28,7 @@ public class Nivel1 extends AppCompatActivity {
     public Resultado result1, result2, result3;
     int partidas = 1;
     ImageView barra;
+    LinearLayout votovoto;
 
 
 
@@ -40,6 +44,7 @@ public class Nivel1 extends AppCompatActivity {
         voto2.setVisibility(View.GONE);
         result1=generarPares(1);
         barra = findViewById(R.id.barraprogreso);
+        votovoto = findViewById(R.id.paravotar);
 
 
 
@@ -93,12 +98,13 @@ public class Nivel1 extends AppCompatActivity {
         if(sonando2==1){
             voto1.setVisibility(View.VISIBLE);
             voto2.setVisibility(View.VISIBLE);
+            votovoto.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
         }
 
         if(mp1.isPlaying()==false){
 
-            bplay1.setImageResource(R.drawable.volume_azul);
-            bplay2.setImageResource(R.drawable.mute_blanco);
+            bplay1.setImageResource(R.drawable.audio1_on);
+            bplay2.setImageResource(R.drawable.audio2_off);
             mp1.start();
             mp2.start();
             mp1.setVolume(1,1);
@@ -115,8 +121,8 @@ public class Nivel1 extends AppCompatActivity {
 
             }
             if(sonando==2){
-                bplay1.setImageResource(R.drawable.volume_azul);
-                bplay2.setImageResource(R.drawable.mute_blanco);
+                bplay1.setImageResource(R.drawable.audio1_on);
+                bplay2.setImageResource(R.drawable.audio2_off);
                 mp1.setVolume(1,1);
                 mp2.setVolume(0, 0);
                 sonando=1;
@@ -132,12 +138,13 @@ public class Nivel1 extends AppCompatActivity {
         if(sonando1==1){
             voto1.setVisibility(View.VISIBLE);
             voto2.setVisibility(View.VISIBLE);
+            votovoto.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
         }
 
         if(mp2.isPlaying()==false){
             sonando = 2;
-            bplay2.setImageResource(R.drawable.volume_azul);
-            bplay1.setImageResource(R.drawable.mute_blanco);
+            bplay2.setImageResource(R.drawable.audio2_on);
+            bplay1.setImageResource(R.drawable.audio1_off);
             mp1.start();
             mp2.start();
             mp1.setVolume(0,0);
@@ -154,8 +161,8 @@ public class Nivel1 extends AppCompatActivity {
 
             }
             if(sonando==1){
-                bplay2.setImageResource(R.drawable.volume_azul);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_on);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 mp1.setVolume(0,0);
                 mp2.setVolume(1, 1);
                 sonando=2;
@@ -181,12 +188,12 @@ public class Nivel1 extends AppCompatActivity {
             toast1.show();
             result2=generarPares(1);
             laclave2=result2.getKey();
-            bplay2.setImageResource(R.drawable.mute_blanco);
-            bplay1.setImageResource(R.drawable.mute_blanco);
+            bplay2.setImageResource(R.drawable.audio2_off);
+            bplay1.setImageResource(R.drawable.audio1_off);
             if (laclave2.equals(laclave1)){
                 result2=generarPares(1);
-                bplay2.setImageResource(R.drawable.mute_blanco);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_off);
+                bplay1.setImageResource(R.drawable.audio1_off);
             }
         }
         if(elresultado1==2){
@@ -207,12 +214,12 @@ public class Nivel1 extends AppCompatActivity {
                 toast1.show();
                 result3=generarPares(1);
                 laclave3=result3.getKey();
-                bplay2.setImageResource(R.drawable.mute_blanco);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_off);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 if (laclave3.equals(laclave2)){
                     result3=generarPares(1);
-                    bplay2.setImageResource(R.drawable.mute_blanco);
-                    bplay1.setImageResource(R.drawable.mute_blanco);
+                    bplay2.setImageResource(R.drawable.audio2_off);
+                    bplay1.setImageResource(R.drawable.audio1_off);
                 }
             }
             if(elresultado2==2){
@@ -258,12 +265,12 @@ public class Nivel1 extends AppCompatActivity {
                 toast1.show();
                 result2=generarPares(1);
                 laclave2=result2.getKey();
-                bplay2.setImageResource(R.drawable.mute_blanco);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_off);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 if (laclave2.equals(laclave1)){
                     result2=generarPares(1);
-                    bplay2.setImageResource(R.drawable.mute_blanco);
-                    bplay1.setImageResource(R.drawable.mute_blanco);
+                    bplay2.setImageResource(R.drawable.audio2_off);
+                    bplay1.setImageResource(R.drawable.audio1_off);
                 }
             }
             if(elresultado1==1){
@@ -285,12 +292,12 @@ public class Nivel1 extends AppCompatActivity {
                 toast1.show();
                 result3=generarPares(1);
                 laclave3=result3.getKey();
-                bplay2.setImageResource(R.drawable.mute_blanco);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_off);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 if (laclave3.equals(laclave2)){
                     result3=generarPares(1);
-                    bplay2.setImageResource(R.drawable.mute_blanco);
-                    bplay1.setImageResource(R.drawable.mute_blanco);
+                    bplay2.setImageResource(R.drawable.audio2_off);
+                    bplay1.setImageResource(R.drawable.audio1_off);
                 }
             }
             if(elresultado2==1){
@@ -324,9 +331,9 @@ public class Nivel1 extends AppCompatActivity {
 
     public void aStats(){
 
-        Intent intent = new Intent (this, Estadisticas.class);
+        Intent intent = new Intent (this, Jugar.class);
         startActivityForResult(intent, 0);
-
+        finish();
     }
 
     public void aStatsB(View view){
@@ -339,7 +346,7 @@ public class Nivel1 extends AppCompatActivity {
     public void aNivel2(){
 
         Intent intent = new Intent (this, Nivel2.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intent);
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
         finish();
 
     }

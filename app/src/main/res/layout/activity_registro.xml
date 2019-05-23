@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registro"
+    tools:context=".Registro">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
     >
+
+
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="770dp"
         android:src="@drawable/fondoregistros"
         android:scaleType="centerCrop"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="100dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
+
 
     <!--<View
         android:id="@+id/view"
@@ -52,7 +52,7 @@
                 android:layout_height="140dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginBottom="16dp"
+
                 android:contentDescription="LogoGSE"
                 app:srcCompat="@drawable/logosolido2"
                 android:transitionName="mainlogo"/>
@@ -74,9 +74,9 @@
         android:id="@+id/email"
         android:layout_below="@id/registrate"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginLeft="50dp">
 
         <ImageView
@@ -86,10 +86,18 @@
             android:layout_gravity="center"
             />
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            >
+
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/txtemail"
 
-            android:layout_marginLeft="20dp"
+
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -99,15 +107,19 @@
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
             android:visibility="visible"
+            android:maxLines="1"
             />
+
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/usuario"
+        android:layout_marginTop="8dp"
         android:layout_below="@id/email"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginLeft="50dp">
 
@@ -118,9 +130,17 @@
             android:layout_gravity="center"
             />
 
-        <EditText
-            android:id="@+id/txtusuario"
+        <android.support.design.widget.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtusuario"
+
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -132,40 +152,52 @@
             android:visibility="visible"
             />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contraseña"
-        android:layout_below="@id/usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_marginLeft="50dp">
-
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/iconocontrasena"
-            android:layout_gravity="center"
-            />
-
-        <EditText
-            android:id="@+id/txtcontraseña"
-
-            android:layout_marginLeft="20dp"
-            android:layout_width="220dp"
-            android:paddingRight="50dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="@string/passsign"
-            android:inputType="textPassword"
-            android:singleLine="true"
-            android:textColor="#FFFF"
-            android:textColorHint="#FFFF"
-            android:visibility="visible"
-            />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contraseña"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usuario"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+               >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iconocontrasena"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txtcontraseña"
+
+                    android:baselineAligned="true"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="@string/passsign"
+                    android:inputType="textPassword"
+                    android:paddingRight="50dp"
+                    android:singleLine="true"
+                    android:textColor="#FFFF"
+                    android:textColorHint="#FFFF"
+                    android:visibility="visible" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
 
     <LinearLayout
         android:id="@+id/infoextra"
@@ -186,13 +218,15 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="@string/pro1"
+                    android:textSize="16dp"
                     android:layout_alignParentLeft="true"/>
 
                 <Spinner
@@ -224,6 +258,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="@string/pro2"
+                    android:textSize="16dp"
                     android:layout_alignParentLeft="true"/>
 
                 <Spinner
@@ -254,6 +289,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
+                    android:textSize="16dp"
                     android:text="@string/pro3"
                     android:layout_alignParentLeft="true"/>
 
@@ -287,6 +323,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="@string/pro4"
+                    android:textSize="16dp"
                     android:layout_alignParentLeft="true"/>
 
                 <Spinner
@@ -319,6 +356,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="@string/pro5"
+                    android:textSize="16dp"
                     android:layout_alignParentLeft="true"/>
 
                 <Spinner
@@ -338,23 +376,25 @@
 
     </LinearLayout>
 
-        </RelativeLayout>
 
-    </ScrollView>
+
+
 
 
     <Button
         android:layout_width="240dp"
         android:layout_height="35dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
+        android:layout_below="@id/infoextra"
         android:layout_marginTop="24dp"
         android:background="@drawable/boton_redondo_inicio"
         android:text="@string/login4"
         android:clickable="true"
+        android:layout_marginBottom="24dp"
         android:textStyle="bold" />
 
 
 
 </RelativeLayout>
+
+</ScrollView>

@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".StatsFragment">
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,7 +38,7 @@
             android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="85dp"
-            android:layout_marginTop="40dp"
+
             android:layout_centerHorizontal="true"
             android:src="@drawable/ffstats"/>
         // Zona Amarilla de ESCUCHA
@@ -44,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/titulo"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="24dp"
             android:orientation="vertical"
             android:background="@drawable/marcoclaim"
 
@@ -57,7 +61,7 @@
                 android:textStyle="bold"
                 android:textSize="16dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:textColor="#ffffff"/>
             <TextView
                 android:layout_width="250dp"
@@ -65,16 +69,619 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/stats2"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="8dp"
                 android:textColor="#ffffff"/>
 
 
 
         </LinearLayout>
 
-        //A partir de aquí es el ESPACIO DE RESPUESTA
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/espacioaudios"
+            android:id="@+id/filtros"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Filtro:"/>
+
+            <Spinner
+                android:layout_marginLeft="40dp"
+                android:id="@+id/spinnerfiltro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        //BLOQUE DE STATS PARA EL NIVEL 1
+
+        <LinearLayout
+            android:id="@+id/lev1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filtros"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/marcostat">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="MEDIA:"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="TÚ:"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textSize="18sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="HOY:"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textSize="18sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
 
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"
+                android:src="@drawable/stats_gris_def"/>
+            <TextView
+                android:id="@+id/statgeneral1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="83%"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:textColor="#78A217"
+                android:textSize="30sp"
+                />
+            <TextView
+                android:id="@+id/statuser1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="76%"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:textColor="#B3B130"
+                android:textSize="30sp"/>
+            <TextView
+                android:id="@+id/statuserdia1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="92%"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:textColor="#78A217"
+                android:textSize="30sp"/>
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        //BLOQUE DE STATS PARA EL NIVEL 2
+
+        <LinearLayout
+            android:id="@+id/lev2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lev1"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/marcostat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="MEDIA:"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="TÚ:"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="HOY:"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:layout_weight="1"
+                        android:src="@drawable/stats_gris_def"/>
+                    <TextView
+                        android:id="@+id/statgeneral2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="75%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#8BB330"
+                        android:textSize="30sp"
+                        />
+                    <TextView
+                        android:id="@+id/statuser2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="82%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#78A217"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/statuserdia2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="95%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#78A217"
+                        android:textSize="30sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //BLOQUE DE STATS PARA EL NIVEL 3
+
+        <LinearLayout
+            android:id="@+id/lev3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lev2"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/marcostat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="MEDIA:"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="TÚ:"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="HOY:"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:layout_weight="1"
+                        android:src="@drawable/stats_gris_def"/>
+                    <TextView
+                        android:id="@+id/statgeneral3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="63%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#B3B130"
+                        android:textSize="30sp"
+                        />
+                    <TextView
+                        android:id="@+id/statuser3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="78%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#B3B130"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/statuserdia3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="82%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#78A217"
+                        android:textSize="30sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //BLOQUE DE STATS PARA EL NIVEL 1
+
+        <LinearLayout
+            android:id="@+id/lev4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lev3"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/marcostat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="MEDIA:"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="TÚ:"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="HOY:"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:layout_weight="1"
+                        android:src="@drawable/stats_gris_def"/>
+                    <TextView
+                        android:id="@+id/statgeneral4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="41%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#F44336"
+                        android:textSize="30dp"
+                        />
+                    <TextView
+                        android:id="@+id/statuser4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="66%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#B3B130"
+                        android:textSize="30dp"/>
+                    <TextView
+                        android:id="@+id/statuserdia4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="66%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#78A217"
+                        android:textSize="30dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //BLOQUE DE STATS PARA EL NIVEL 1
+
+        <LinearLayout
+            android:id="@+id/lev5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lev4"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:background="@drawable/marcostat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="MEDIA:"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="TÚ:"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:text="HOY:"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:layout_weight="1"
+                        android:src="@drawable/stats_gris_def"/>
+                    <TextView
+                        android:id="@+id/statgeneral5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="33%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#F44336"
+                        android:textSize="30dp"
+                        />
+                    <TextView
+                        android:id="@+id/statuser5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#666464"
+                        android:textSize="30dp"/>
+                    <TextView
+                        android:id="@+id/statuserdia5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0%"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:textColor="#666464"
+                        android:textSize="30dp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
 
         //A partir de aquí es toda la barra de abajo - JUEGO
@@ -82,4 +689,5 @@
 
     </RelativeLayout>
 
+    </android.support.v4.widget.NestedScrollView>
 </FrameLayout>

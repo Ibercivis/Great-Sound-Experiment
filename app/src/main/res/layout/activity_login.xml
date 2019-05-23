@@ -55,7 +55,7 @@
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="24dp"
         android:textSize="18dp"/>
 
 
@@ -63,22 +63,32 @@
     <LinearLayout
         android:id="@+id/usuario"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/identificate"
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="50dp">
+        android:layout_marginLeft="64dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:src="@drawable/iconousuario"
             android:layout_gravity="center"
             />
 
-        <EditText
-            android:id="@+id/txtusuario"
+        <android.support.design.widget.TextInputLayout
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtusuario"
+
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -88,29 +98,43 @@
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
             android:visibility="visible"
+            android:maxLines="1"
+
             />
+
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/contraseña"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/usuario"
         android:orientation="horizontal"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="50dp">
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="64dp">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:src="@drawable/iconocontrasena"
             android:layout_gravity="center"
             />
 
-        <EditText
-            android:id="@+id/txtcontraseña"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/name_text_input"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtcontraseña"
+
             android:layout_width="200dp"
             android:paddingRight="50dp"
             android:layout_height="wrap_content"
@@ -121,16 +145,25 @@
             android:textColor="#FFFF"
             android:textColorHint="#FFFF"
             android:visibility="visible"
+            android:maxLines="1"
+
            />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
 
     </LinearLayout>
 
     <Button
-        android:layout_width="240dp"
+        android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_below="@id/contraseña"
+        android:layout_marginHorizontal="48dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginBottom="64dp"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/boton_redondo_inicio"
         android:text="@string/login4"
         android:textSize="16dp"

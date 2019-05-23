@@ -1,5 +1,6 @@
 package com.example.ges;
 
+import android.animation.LayoutTransition;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -18,10 +20,15 @@ public class Nivel3 extends AppCompatActivity {
     public ImageView bplay1, bplay2;
     int cantidadAudios=13;
     int sonando = 0;
+    int sonando1 = 0;
+    int sonando2 = 0;
     Button voto1, voto2;
     public Resultado result1, result2, result3;
     int partidas = 1;
     ImageView barra;
+    LinearLayout votovoto;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +38,11 @@ public class Nivel3 extends AppCompatActivity {
         bplay2 = findViewById(R.id.boton2);
         voto1 = findViewById(R.id.audio1);
         voto2 = findViewById(R.id.audio2);
-        int int1;
+        voto1.setVisibility(View.GONE);
+        voto2.setVisibility(View.GONE);
         result1=generarPares(3);
         barra = findViewById(R.id.barraprogreso);
+        votovoto = findViewById(R.id.paravotar);
 
 
 
@@ -62,13 +71,13 @@ public class Nivel3 extends AppCompatActivity {
 
         double aleatorio2 = (Math.random());
         if(aleatorio2<=0.5){
-            mp1 = MediaPlayer.create(this, id1);
-            mp2 = MediaPlayer.create(this, id2);
+            mp1 = MediaPlayer.create(getApplicationContext(), id1);
+            mp2 = MediaPlayer.create(getApplicationContext(), id2);
             audioganador = 2;
         }
         if (aleatorio2>0.5){
-            mp2 = MediaPlayer.create(this, id1);
-            mp1 = MediaPlayer.create(this, id2);
+            mp2 = MediaPlayer.create(getApplicationContext(), id1);
+            mp1 = MediaPlayer.create(getApplicationContext(), id2);
             audioganador = 1;
         }
 
@@ -81,15 +90,24 @@ public class Nivel3 extends AppCompatActivity {
 
     public void play1(View view) {
 
+        sonando1=1;
+
+        if(sonando2==1){
+            voto1.setVisibility(View.VISIBLE);
+            voto2.setVisibility(View.VISIBLE);
+            votovoto.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        }
+
         if(mp1.isPlaying()==false){
 
-            bplay1.setImageResource(R.drawable.volume_azul);
-            bplay2.setImageResource(R.drawable.mute_blanco);
+            bplay1.setImageResource(R.drawable.audio1_on);
+            bplay2.setImageResource(R.drawable.audio2_off);
             mp1.start();
             mp2.start();
             mp1.setVolume(1,1);
             mp2.setVolume(0, 0);
             sonando = 1;
+
         }
 
 
@@ -97,27 +115,38 @@ public class Nivel3 extends AppCompatActivity {
         if(mp1.isPlaying()==true){
             if(sonando==1){
 
+
             }
             if(sonando==2){
-                bplay1.setImageResource(R.drawable.volume_azul);
-                bplay2.setImageResource(R.drawable.mute_blanco);
+                bplay1.setImageResource(R.drawable.audio1_on);
+                bplay2.setImageResource(R.drawable.audio2_off);
                 mp1.setVolume(1,1);
                 mp2.setVolume(0, 0);
                 sonando=1;
+
             }
         }
     }
 
     public void play2(View view) {
 
+        sonando2 = 1;
+
+        if(sonando1==1){
+            voto1.setVisibility(View.VISIBLE);
+            voto2.setVisibility(View.VISIBLE);
+            votovoto.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        }
+
         if(mp2.isPlaying()==false){
             sonando = 2;
-            bplay2.setImageResource(R.drawable.volume_azul);
-            bplay1.setImageResource(R.drawable.mute_blanco);
+            bplay2.setImageResource(R.drawable.audio2_on);
+            bplay1.setImageResource(R.drawable.audio1_off);
             mp1.start();
             mp2.start();
             mp1.setVolume(0,0);
             mp2.setVolume(1, 1);
+
 
         }
 
@@ -126,13 +155,16 @@ public class Nivel3 extends AppCompatActivity {
         if(mp2.isPlaying()==true){
             if(sonando==2){
 
+
             }
             if(sonando==1){
-                bplay2.setImageResource(R.drawable.volume_azul);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_on);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 mp1.setVolume(0,0);
                 mp2.setVolume(1, 1);
                 sonando=2;
+
+
             }
         }
     }
@@ -147,22 +179,22 @@ public class Nivel3 extends AppCompatActivity {
             laclave1 = result1.getKey();
             if(elresultado1==1){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result2=generarPares(3);
                 laclave2=result2.getKey();
-                bplay2.setImageResource(R.drawable.mute_blanco);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_off);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 if (laclave2.equals(laclave1)){
                     result2=generarPares(3);
-                    bplay2.setImageResource(R.drawable.mute_blanco);
-                    bplay1.setImageResource(R.drawable.mute_blanco);
+                    bplay2.setImageResource(R.drawable.audio2_off);
+                    bplay1.setImageResource(R.drawable.audio1_off);
                 }
             }
             if(elresultado1==2){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
@@ -173,22 +205,22 @@ public class Nivel3 extends AppCompatActivity {
             laclave2 = result2.getKey();
             if(elresultado2==1){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(3);
                 laclave3=result3.getKey();
-                bplay2.setImageResource(R.drawable.mute_blanco);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_off);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 if (laclave3.equals(laclave2)){
                     result3=generarPares(3);
-                    bplay2.setImageResource(R.drawable.mute_blanco);
-                    bplay1.setImageResource(R.drawable.mute_blanco);
+                    bplay2.setImageResource(R.drawable.audio2_off);
+                    bplay1.setImageResource(R.drawable.audio1_off);
                 }
             }
             if(elresultado2==2){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
@@ -198,14 +230,14 @@ public class Nivel3 extends AppCompatActivity {
             elresultado3 = result3.getGanador();
             if(elresultado3==1){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                aNivel4();
+                aNivel3();
 
             }
             if(elresultado3==2){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
@@ -224,22 +256,22 @@ public class Nivel3 extends AppCompatActivity {
             laclave1 = result1.getKey();
             if(elresultado1==2){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result2=generarPares(3);
                 laclave2=result2.getKey();
-                bplay2.setImageResource(R.drawable.mute_blanco);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_off);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 if (laclave2.equals(laclave1)){
                     result2=generarPares(3);
-                    bplay2.setImageResource(R.drawable.mute_blanco);
-                    bplay1.setImageResource(R.drawable.mute_blanco);
+                    bplay2.setImageResource(R.drawable.audio2_off);
+                    bplay1.setImageResource(R.drawable.audio1_off);
                 }
             }
             if(elresultado1==1){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
 
@@ -251,22 +283,22 @@ public class Nivel3 extends AppCompatActivity {
             laclave2 = result2.getKey();
             if(elresultado2==2){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 result3=generarPares(3);
                 laclave3=result3.getKey();
-                bplay2.setImageResource(R.drawable.mute_blanco);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_off);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 if (laclave3.equals(laclave2)){
                     result3=generarPares(3);
-                    bplay2.setImageResource(R.drawable.mute_blanco);
-                    bplay1.setImageResource(R.drawable.mute_blanco);
+                    bplay2.setImageResource(R.drawable.audio2_off);
+                    bplay1.setImageResource(R.drawable.audio1_off);
                 }
             }
             if(elresultado2==1){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
@@ -276,14 +308,14 @@ public class Nivel3 extends AppCompatActivity {
             elresultado3 = result3.getGanador();
             if(elresultado3==2){
 
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
-                aNivel4();
+                aNivel3();
 
             }
             if(elresultado3==1){
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_LONG);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aStats();
@@ -291,41 +323,26 @@ public class Nivel3 extends AppCompatActivity {
         }
         partidas = (partidas + 1);
 
+
     }
 
 
     public void aStats(){
 
-        Intent intent = new Intent (this, Estadisticas.class);
+        Intent intent = new Intent (this, Jugar.class);
         startActivityForResult(intent, 0);
+        finish();
 
     }
 
-    public void aStatsB(View view){
-
-        Intent intent = new Intent (this, Estadisticas.class);
-        startActivityForResult(intent, 0);
-
-    }
-
-    public void aNivel4(){
+    public void aNivel3(){
 
         Intent intent = new Intent (this, Nivel4.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivityForResult(intent, 0);
-        finish();
-
-
-
-    }
-
-
-    public void aPerfil(View view){
-        Intent intent = new Intent (this, Perfil.class);
         startActivity(intent);
         finish();
+
     }
 
+
+
 }
-
-
-

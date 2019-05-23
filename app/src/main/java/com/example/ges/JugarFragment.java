@@ -57,7 +57,7 @@ public class JugarFragment extends Fragment {
 
         Intent intent = new Intent(getContext(), Nivel1.class);
 
-        startActivity(intent);
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(getActivity()).toBundle());
 
     }
 

@@ -40,5 +40,13 @@
         <item>100€ or +      </item>
         <item>DK             </item>
     </string-array>
+
+    <string-array name="filtro_array">
+        <item>Everyone       </item>
+        <item>Men            </item>
+        <item>Women          </item>
+        <item>Headphones +30€</item>
+        <item>Headphones -30€</item>
+    </string-array>
 </resources>
 

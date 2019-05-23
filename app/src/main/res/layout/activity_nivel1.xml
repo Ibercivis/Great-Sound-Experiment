@@ -68,9 +68,9 @@
             android:id="@+id/espacioaudios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/colorcito"
-            android:layout_marginTop="16dp"
+
             android:orientation="vertical"
+            android:layout_centerInParent="true"
             >
 
             <!-- <TextView
@@ -92,6 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+
                 >
 
                 <RelativeLayout
@@ -108,7 +109,8 @@
                         android:layout_centerVertical="true"
                         android:clickable="true"
                         android:src="@drawable/audio1_off"
-
+                        android:onClick="play1"
+                        android:focusable="true"
                         />
 
 
@@ -128,6 +130,8 @@
                         android:layout_centerVertical="true"
                         android:clickable="true"
                         android:src="@drawable/audio2_off"
+                        android:onClick="play2"
+                        android:focusable="true"
                         />
 
 
@@ -140,9 +144,12 @@
         //A partir de aquí es el ESPACIO DE RESPUESTA
 
         <LinearLayout
+            android:id="@+id/paravotar"
+            android:animateLayoutChanges="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/espacioaudios"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp"
             android:layout_margin="24dp"
             android:orientation="vertical"
             android:background="@drawable/marcohome">
@@ -168,6 +175,8 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="16dp"
                 android:layout_gravity="center"
+                android:onClick="votar1"
+                android:focusable="true"
                 />
 
             <Button
@@ -180,6 +189,8 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="16dp"
                 android:layout_gravity="center"
+                android:focusable="true"
+                android:onClick="votar2"
                 />
 
             <TextView

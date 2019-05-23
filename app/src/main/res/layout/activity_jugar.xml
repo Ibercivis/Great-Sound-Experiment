@@ -30,6 +30,7 @@
     android:background="@color/rosasplash"
     app:itemIconTint="@color/bottom_nav"
     app:itemTextColor="@color/bottom_nav"
+    app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
     ></android.support.design.widget.BottomNavigationView>
 
 </RelativeLayout>

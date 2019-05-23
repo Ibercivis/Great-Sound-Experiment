@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -22,6 +23,7 @@ public class Nivel4 extends AppCompatActivity {
     public Resultado result1, result2, result3;
     int partidas = 1;
     ImageView barra;
+    LinearLayout votovoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class Nivel4 extends AppCompatActivity {
         int int1;
         result1=generarPares(4);
         barra = findViewById(R.id.barraprogreso);
+        votovoto = findViewById(R.id.paravotar);
 
 
 
@@ -296,9 +299,9 @@ public class Nivel4 extends AppCompatActivity {
 
     public void aStats(){
 
-        Intent intent = new Intent (this, Estadisticas.class);
+        Intent intent = new Intent (this, Jugar.class);
         startActivityForResult(intent, 0);
-
+finish();
     }
 
     public void aStatsB(View view){
