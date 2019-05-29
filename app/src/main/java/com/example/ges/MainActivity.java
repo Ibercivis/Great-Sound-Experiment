@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void aRegistro() {
         Intent intent = new Intent (this, Registro.class);
+        finish();
         startActivity(intent);
 
 
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void aLogin() {
         Intent intent = new Intent (this, Login.class);
+        finish();
         startActivity(intent);
 
 

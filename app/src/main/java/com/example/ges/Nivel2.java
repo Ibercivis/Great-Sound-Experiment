@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,19 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
+import java.util.Map;
 
 public class Nivel2 extends AppCompatActivity {
 
@@ -179,7 +192,7 @@ public class Nivel2 extends AppCompatActivity {
             elresultado1 = result1.getGanador();
             laclave1 = result1.getKey();
             if(elresultado1==1){
-
+                gameRequest(2,1); //ACIERTO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
@@ -195,6 +208,7 @@ public class Nivel2 extends AppCompatActivity {
                 }
             }
             if(elresultado1==2){
+                gameRequest(2,0); //FALLO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -205,6 +219,7 @@ public class Nivel2 extends AppCompatActivity {
             elresultado2 = result2.getGanador();
             laclave2 = result2.getKey();
             if(elresultado2==1){
+                gameRequest(2,1); //ACIERTO 2, 1
 
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 barra.setImageResource(R.drawable.barranivel3);
@@ -221,6 +236,7 @@ public class Nivel2 extends AppCompatActivity {
                 }
             }
             if(elresultado2==2){
+                gameRequest(2,0); //FALLO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -230,7 +246,7 @@ public class Nivel2 extends AppCompatActivity {
         if(partidas==3){
             elresultado3 = result3.getGanador();
             if(elresultado3==1){
-
+                gameRequest(2,1); //ACIERTO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -238,6 +254,7 @@ public class Nivel2 extends AppCompatActivity {
 
             }
             if(elresultado3==2){
+                gameRequest(2,0); //FALLO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -256,7 +273,7 @@ public class Nivel2 extends AppCompatActivity {
             elresultado1 = result1.getGanador();
             laclave1 = result1.getKey();
             if(elresultado1==2){
-
+                gameRequest(2,1); //ACIERTO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 barra.setImageResource(R.drawable.barranivel2);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
@@ -272,6 +289,7 @@ public class Nivel2 extends AppCompatActivity {
                 }
             }
             if(elresultado1==1){
+                gameRequest(2,0); //FALLO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -283,7 +301,7 @@ public class Nivel2 extends AppCompatActivity {
             elresultado2 = result2.getGanador();
             laclave2 = result2.getKey();
             if(elresultado2==2){
-
+                gameRequest(2,1); //ACIERTO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Has acertado. Sigue compitiendo!", Toast.LENGTH_SHORT);
                 barra.setImageResource(R.drawable.barranivel3);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
@@ -299,6 +317,7 @@ public class Nivel2 extends AppCompatActivity {
                 }
             }
             if(elresultado2==1){
+                gameRequest(2,0); //FALLO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -308,7 +327,7 @@ public class Nivel2 extends AppCompatActivity {
         if(partidas==3){
             elresultado3 = result3.getGanador();
             if(elresultado3==2){
-
+                gameRequest(2,1); //ACIERTO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -316,6 +335,7 @@ public class Nivel2 extends AppCompatActivity {
 
             }
             if(elresultado3==1){
+                gameRequest(2,0); //FALLO 2, 1
                 Toast toast1 = Toast.makeText(getApplicationContext(), "Has fallado... ¡Vuelves a empezar!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
@@ -344,6 +364,72 @@ public class Nivel2 extends AppCompatActivity {
 
     }
 
+    public void gameRequest (final int elnivel, final int acierto) {
 
+
+
+        // Input data ok, so go with the request
+
+        // Url for the webservice
+        String url = getString(R.string.base_url) + "/game.php";
+
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    System.out.println(response.toString());
+
+                    JSONObject responseJSON = new JSONObject(response);
+
+                    if ((int) responseJSON.get("result") == 1) {
+                        Log.println(1, "Game added succesfully", "Game added succesfully");
+
+
+
+                    } else {
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast;
+                        CharSequence text;
+
+                        text = "Error: " + responseJSON.get("message") + ".";
+                        toast = Toast.makeText(getApplicationContext(), text, duration);
+                        toast.show();
+
+                        // Clean the text fields for new entries
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> login_params = new HashMap<String, String>();
+                SessionManager session = new SessionManager(getApplicationContext());
+                login_params.put("idUser", String.valueOf(session.getIdUser()));
+                login_params.put("token", session.getToken());
+                login_params.put("level", String.valueOf(elnivel));
+                login_params.put("success", String.valueOf(acierto));
+
+                return login_params;
+            }
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("Content-Type", "application/x-www-form-urlencoded");
+                return params;
+            }
+        };
+        sr.setShouldCache(false);
+        queue.add(sr);
+    }
 
 }

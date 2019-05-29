@@ -34,6 +34,7 @@ public class SplashActivity extends AppCompatActivity {
         ImageView logo = findViewById(R.id.imageView);
         Intent intent = new Intent(this, MainActivity.class);
         ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation(SplashActivity.this, logo, "mainlogo");
+        finish();
         startActivity(intent, transitionActivityOptions.toBundle());
 
     }

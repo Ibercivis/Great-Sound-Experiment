@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">GES</string>
+    <string name="base_url">https://gse.ibercivis.es</string>
 
     <string name="claim1">¿Eres capaz de distinguir qué audio suena mejor?</string>
     <string name="claim2">Escucha, aprende, compite</string>
@@ -35,7 +36,7 @@
     <string name="pro3">Formación musical:</string>
     <string name="pro4">Tipo de auriculares:</string>
     <string name="pro5">Rango de precio:</string>
-    <string name="pro6">Aplicar cambios</string>
+    <string name="pro6">Modificar</string>
 
     <string name="reto">El Reto</string>
     <string name="reto1">¿Aceptas el reto?</string>
@@ -54,4 +55,6 @@
     <string name="claim6">Creo que el...</string>
     <string name="claim7">...suena mejor</string>
 
+    <string name="token"></string>
+    <string name="idUser"></string>
 </resources>

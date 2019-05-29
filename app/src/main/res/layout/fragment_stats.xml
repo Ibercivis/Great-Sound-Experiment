@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".StatsFragment">
 
-    <android.support.v4.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -64,8 +66,9 @@
                 android:layout_marginTop="8dp"
                 android:textColor="#ffffff"/>
             <TextView
-                android:layout_width="250dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/stats2"
@@ -76,618 +79,1693 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
+            android:layout_marginVertical="2dp"
+            android:paddingVertical="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="12dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:layout_below="@id/espacioaudios"
             android:id="@+id/filtros"
-            android:gravity="center">
+            >
 
             <TextView
+                android:id="@+id/filtrotit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/spinnerfiltro"
+                android:layout_centerVertical="true"
                 android:textStyle="bold"
-                android:textColor="#000000"
+                android:textColor="@color/rosachica"
+                android:textSize="16sp"
                 android:text="Filtro:"/>
 
             <Spinner
                 android:layout_marginLeft="40dp"
                 android:id="@+id/spinnerfiltro"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="textEnd">
+                android:textAlignment="textEnd"
+                >
 
             </Spinner>
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/aplicar"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="30dp"
+                android:layout_marginRight="16dp"
+                android:text="Aplicar"
+                android:background="@drawable/boton_backgroundfiltro"/>
+
+        </RelativeLayout>
 
         //BLOQUE DE STATS PARA EL NIVEL 1
 
-        <LinearLayout
-            android:id="@+id/lev1"
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:orientation="vertical"
+            app:cardBackgroundColor="#EBE6E6"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
             android:layout_below="@id/filtros"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            android:background="@drawable/marcostat">
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+           >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
             <LinearLayout
+                android:contentDescription="Esto aloja a los levels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="vertical">
 
-                <TextView
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                    android:layout_width="0dp"
+                <!--<TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:text="MEDIA:"
-                    android:textColor="#333333"
-                    android:textStyle="bold"
+                    android:text="Nivel 1"
                     android:gravity="center"
-                    android:fontFamily="sans-serif-condensed-light"
+                    android:textColor="#000000"
                     android:textSize="18sp"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:fontFamily="sans-serif-black"/>-->
+
+                <ImageView
+                    android:id="@+id/slevel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:src="@drawable/slevel1"/>
 
                 <TextView
-                    android:text="TÚ:"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:textSize="18sp"
-                    android:textColor="#333333"
-                    android:textStyle="bold"
-                    android:gravity="center_horizontal"
-                    android:layout_width="0dp"
+                    android:id="@+id/dslevel1"
+                    android:layout_below="@id/slevel1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:text="WAV a 8bits vs. WAV a 16bits"
+                    android:gravity="center"
+                    android:textColor="@color/colorgris"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-condensed"/>
 
-                <TextView
-                    android:text="HOY:"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:textSize="18sp"
-                    android:textColor="#333333"
-                    android:textStyle="bold"
-                    android:gravity="center_horizontal"
-                    android:layout_width="0dp"
+                    <ImageView
+                        android:id="@+id/expand1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_expand"
+                        android:layout_alignRight="@id/slevel1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="64dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="#cccccc"
+                        android:layout_below="@id/dslevel1"></LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/detaillev1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/sgeneral"
+                        android:padding="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp">
+
+
+
+                        <TextView
+                            android:id="@+id/gt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="General"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/sgt1"
+                            android:layout_below="@id/gt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estadísticas asociadas al filtro seleccionado"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textSize="11sp"
+                            android:textColor="#686666"/>
+
+                            <TextView
+                                android:id="@+id/numg1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="8dp"
+                                android:textColor="#78A217"
+                                android:textSize="16sp"
+                                android:text="75%"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="16dp">
+
+                            <ProgressBar
+                                android:id="@+id/genlev1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:progress="75"
+                                android:progressBackgroundTint="@color/colorgris" />
+
+                        </LinearLayout>
+                        
+
+
+                    </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:orientation="horizontal"
+                android:background="@color/colorgris"
+                android:layout_marginVertical="2dp"
+                android:layout_marginHorizontal="16dp">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/sindividual"
+                        android:padding="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp">
+
+
+
+                            <TextView
+                                android:id="@+id/it1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Individual"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/sit1"
+                                android:layout_below="@id/it1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tus estadísticas desde que empezaste a jugar"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textSize="11sp"
+                                android:textColor="#686666"/>
+
+                            <TextView
+                                android:id="@+id/numi1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="8dp"
+                                android:textColor="#78A217"
+                                android:textSize="16sp"
+                                android:text="87%"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="16dp">
+
+                            <ProgressBar
+                                android:id="@+id/indlev1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:progress="87"
+                                android:progressBackgroundTint="@color/colorgris" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:orientation="horizontal"
+                    android:background="@color/colorgris"
+                    android:layout_marginVertical="2dp"
+                    android:layout_marginHorizontal="16dp">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/sdiario"
+                        android:padding="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp">
+
+
+
+                            <TextView
+                                android:id="@+id/ht1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hoy"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/hit1"
+                                android:layout_below="@id/ht1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tus estadísticas en el día de hoy"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textSize="11sp"
+                                android:textColor="#686666"/>
+
+                            <TextView
+                                android:id="@+id/numh1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="8dp"
+                                android:textColor="#78A217"
+                                android:textSize="16sp"
+                                android:text="80%"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="16dp">
+
+                            <ProgressBar
+                                android:id="@+id/hoylev1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:progress="80"
+                                android:progressBackgroundTint="@color/colorgris" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-
-            >
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:scaleType="fitCenter"
-                android:layout_weight="1"
-                android:src="@drawable/stats_gris_def"/>
-            <TextView
-                android:id="@+id/statgeneral1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="83%"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:textColor="#78A217"
-                android:textSize="30sp"
-                />
-            <TextView
-                android:id="@+id/statuser1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="76%"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:textColor="#B3B130"
-                android:textSize="30sp"/>
-            <TextView
-                android:id="@+id/statuserdia1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="92%"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:textColor="#78A217"
-                android:textSize="30sp"/>
 
 
-        </LinearLayout>
+         //HASTA AQUÍ LEVEL 1
 
-        </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nivel 1"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-black"/>-->
+
+                    <ImageView
+                        android:id="@+id/slevel2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:src="@drawable/slevel2"/>
+
+                    <TextView
+                        android:id="@+id/dslevel2"
+                        android:layout_below="@id/slevel2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MP3 a 64kbps vs. WAV a 16bits"
+                        android:gravity="center"
+                        android:textColor="@color/colorgris"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-condensed"/>
+
+                    <ImageView
+                        android:id="@+id/expand2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_expand"
+                        android:layout_alignRight="@id/slevel2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="64dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="#cccccc"
+                        android:layout_below="@id/dslevel2"></LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/detaillev2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/sgeneral"
+                            android:padding="6dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="12dp">
+
+
+
+                                <TextView
+                                    android:id="@+id/gt2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="General"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:id="@+id/sgt2"
+                                    android:layout_below="@id/gt2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Estadísticas asociadas al filtro seleccionado"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textSize="11sp"
+                                    android:textColor="#686666"/>
+
+                                <TextView
+                                    android:id="@+id/numg2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="8dp"
+                                    android:textColor="#78A217"
+                                    android:textSize="16sp"
+                                    android:text="75%"/>
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="16dp">
+
+                                <ProgressBar
+                                    android:id="@+id/genlev2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:progress="75"
+                                    android:progressBackgroundTint="@color/colorgris" />
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:orientation="horizontal"
+                        android:background="@color/colorgris"
+                        android:layout_marginVertical="2dp"
+                        android:layout_marginHorizontal="16dp">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/sindividual"
+                            android:padding="6dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="12dp">
+
+
+
+                                <TextView
+                                    android:id="@+id/it2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Individual"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:id="@+id/sit2"
+                                    android:layout_below="@id/it2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tus estadísticas desde que empezaste a jugar"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textSize="11sp"
+                                    android:textColor="#686666"/>
+
+                                <TextView
+                                    android:id="@+id/numi2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="8dp"
+                                    android:textColor="#78A217"
+                                    android:textSize="16sp"
+                                    android:text="87%"/>
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="16dp">
+
+                                <ProgressBar
+                                    android:id="@+id/indlev2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:progress="87"
+                                    android:progressBackgroundTint="@color/colorgris" />
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:orientation="horizontal"
+                        android:background="@color/colorgris"
+                        android:layout_marginVertical="2dp"
+                        android:layout_marginHorizontal="16dp">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="6dp">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/sdiario"
+                            android:padding="6dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="12dp">
+
+
+
+                                <TextView
+                                    android:id="@+id/ht2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hoy"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:id="@+id/hit2"
+                                    android:layout_below="@id/ht2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tus estadísticas en el día de hoy"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textSize="11sp"
+                                    android:textColor="#686666"/>
+
+                                <TextView
+                                    android:id="@+id/numh2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="8dp"
+                                    android:textColor="#78A217"
+                                    android:textSize="16sp"
+                                    android:text="80%"/>
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="16dp">
+
+                                <ProgressBar
+                                    android:id="@+id/hoylev2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:progress="80"
+                                    android:progressBackgroundTint="@color/colorgris" />
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+                //HASTA AQUÍ
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--<TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nivel 1"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif-black"/>-->
+
+                        <ImageView
+                            android:id="@+id/slevel3"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:src="@drawable/slevel3"/>
+
+                        <TextView
+                            android:id="@+id/dslevel3"
+                            android:layout_below="@id/slevel3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MP3 a 64kbps vs. MP3 a 190kbps"
+                            android:gravity="center"
+                            android:textColor="@color/colorgris"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-condensed"/>
+
+                        <ImageView
+                            android:id="@+id/expand3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_expand"
+                            android:layout_alignRight="@id/slevel3"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="64dp"
+                            android:layout_marginVertical="4dp"
+                            android:background="#cccccc"
+                            android:layout_below="@id/dslevel3"></LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/detaillev3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sgeneral"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/gt3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="General"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/sgt3"
+                                        android:layout_below="@id/gt3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Estadísticas asociadas al filtro seleccionado"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numg3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="75%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/genlev3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="75"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:orientation="horizontal"
+                            android:background="@color/colorgris"
+                            android:layout_marginVertical="2dp"
+                            android:layout_marginHorizontal="16dp">
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sindividual"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/it3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Individual"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/sit3"
+                                        android:layout_below="@id/it3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tus estadísticas desde que empezaste a jugar"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numi3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="87%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/indlev3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="87"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:orientation="horizontal"
+                            android:background="@color/colorgris"
+                            android:layout_marginVertical="2dp"
+                            android:layout_marginHorizontal="16dp">
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="6dp">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sdiario"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/ht3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hoy"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/hit3"
+                                        android:layout_below="@id/ht3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tus estadísticas en el día de hoy"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numh3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="80%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/hoylev3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="80"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //AQUÍ NIVEL 4
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--<TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nivel 1"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif-black"/>-->
+
+                        <ImageView
+                            android:id="@+id/slevel4"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:src="@drawable/slevel4"/>
+
+                        <TextView
+                            android:id="@+id/dslevel4"
+                            android:layout_below="@id/slevel4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MP3 a 128kbps vs. WAV a 320kbps"
+                            android:gravity="center"
+                            android:textColor="@color/colorgris"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-condensed"/>
+
+                        <ImageView
+                            android:id="@+id/expand4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_expand"
+                            android:layout_alignRight="@id/slevel4"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="64dp"
+                            android:layout_marginVertical="4dp"
+                            android:background="#cccccc"
+                            android:layout_below="@id/dslevel4"></LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/detaillev4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sgeneral"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/gt4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="General"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/sgt4"
+                                        android:layout_below="@id/gt4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Estadísticas asociadas al filtro seleccionado"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numg4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="75%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/genlev4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="75"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:orientation="horizontal"
+                            android:background="@color/colorgris"
+                            android:layout_marginVertical="2dp"
+                            android:layout_marginHorizontal="16dp">
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sindividual"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/it4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Individual"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/sit4"
+                                        android:layout_below="@id/it4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tus estadísticas desde que empezaste a jugar"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numi4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="87%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/indlev4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="87"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:orientation="horizontal"
+                            android:background="@color/colorgris"
+                            android:layout_marginVertical="2dp"
+                            android:layout_marginHorizontal="16dp">
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="6dp">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sdiario"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/ht4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hoy"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/hit4"
+                                        android:layout_below="@id/ht4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tus estadísticas en el día de hoy"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numh4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="80%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/hoylev4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="80"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                //A PARTIR DE AQUÍ LEVEL 5
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--<TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nivel 1"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif-black"/>-->
+
+                        <ImageView
+                            android:id="@+id/slevel5"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:src="@drawable/slevel5"/>
+
+                        <TextView
+                            android:id="@+id/dslevel5"
+                            android:layout_below="@id/slevel5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MP3 a 320kbps vs. WAV a 16bits"
+                            android:gravity="center"
+                            android:textColor="@color/colorgris"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_marginBottom="2dp"/>
+
+                        <ImageView
+                            android:id="@+id/expand5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_expand"
+                            android:layout_alignRight="@id/slevel5"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"/>
+
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/detaillev5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sgeneral"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/gt5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="General"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/sgt5"
+                                        android:layout_below="@id/gt5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Estadísticas asociadas al filtro seleccionado"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numg5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="75%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/genlev5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="75"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:orientation="horizontal"
+                            android:background="@color/colorgris"
+                            android:layout_marginVertical="2dp"
+                            android:layout_marginHorizontal="16dp">
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sindividual"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/it5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Individual"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/sit5"
+                                        android:layout_below="@id/it5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tus estadísticas desde que empezaste a jugar"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numi5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="87%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/indlev5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="87"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:orientation="horizontal"
+                            android:background="@color/colorgris"
+                            android:layout_marginVertical="2dp"
+                            android:layout_marginHorizontal="16dp">
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="6dp">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/sdiario"
+                                android:padding="6dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="12dp">
+
+
+
+                                    <TextView
+                                        android:id="@+id/ht5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hoy"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textColor="#000000"/>
+
+                                    <TextView
+                                        android:id="@+id/hit5"
+                                        android:layout_below="@id/ht5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Tus estadísticas en el día de hoy"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="11sp"
+                                        android:textColor="#686666"/>
+
+                                    <TextView
+                                        android:id="@+id/numh5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="8dp"
+                                        android:textColor="#78A217"
+                                        android:textSize="16sp"
+                                        android:text="80%"/>
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="16dp">
+
+                                    <ProgressBar
+                                        android:id="@+id/hoylev5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:progress="80"
+                                        android:progressBackgroundTint="@color/colorgris" />
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
 
         //BLOQUE DE STATS PARA EL NIVEL 2
 
-        <LinearLayout
-            android:id="@+id/lev2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lev1"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            android:background="@drawable/marcostat">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="MEDIA:"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="TÚ:"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="HOY:"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal"
-
-                    >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitCenter"
-                        android:layout_weight="1"
-                        android:src="@drawable/stats_gris_def"/>
-                    <TextView
-                        android:id="@+id/statgeneral2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="75%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#8BB330"
-                        android:textSize="30sp"
-                        />
-                    <TextView
-                        android:id="@+id/statuser2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="82%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#78A217"
-                        android:textSize="30sp"/>
-                    <TextView
-                        android:id="@+id/statuserdia2"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="95%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#78A217"
-                        android:textSize="30sp"/>
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        //BLOQUE DE STATS PARA EL NIVEL 3
-
-        <LinearLayout
-            android:id="@+id/lev3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lev2"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            android:background="@drawable/marcostat">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="MEDIA:"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="TÚ:"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="HOY:"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal"
-
-                    >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitCenter"
-                        android:layout_weight="1"
-                        android:src="@drawable/stats_gris_def"/>
-                    <TextView
-                        android:id="@+id/statgeneral3"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="63%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#B3B130"
-                        android:textSize="30sp"
-                        />
-                    <TextView
-                        android:id="@+id/statuser3"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="78%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#B3B130"
-                        android:textSize="30sp"/>
-                    <TextView
-                        android:id="@+id/statuserdia3"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="82%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#78A217"
-                        android:textSize="30sp"/>
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        //BLOQUE DE STATS PARA EL NIVEL 1
-
-        <LinearLayout
-            android:id="@+id/lev4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lev3"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            android:background="@drawable/marcostat">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="MEDIA:"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="TÚ:"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="HOY:"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal"
-
-                    >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitCenter"
-                        android:layout_weight="1"
-                        android:src="@drawable/stats_gris_def"/>
-                    <TextView
-                        android:id="@+id/statgeneral4"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="41%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#F44336"
-                        android:textSize="30dp"
-                        />
-                    <TextView
-                        android:id="@+id/statuser4"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="66%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#B3B130"
-                        android:textSize="30dp"/>
-                    <TextView
-                        android:id="@+id/statuserdia4"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="66%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#78A217"
-                        android:textSize="30dp"/>
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        //BLOQUE DE STATS PARA EL NIVEL 1
-
-        <LinearLayout
-            android:id="@+id/lev5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lev4"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            android:background="@drawable/marcostat">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
-
-                    <TextView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="MEDIA:"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="TÚ:"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="HOY:"
-                        android:fontFamily="sans-serif-condensed-light"
-                        android:textSize="18sp"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal"
-
-                    >
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitCenter"
-                        android:layout_weight="1"
-                        android:src="@drawable/stats_gris_def"/>
-                    <TextView
-                        android:id="@+id/statgeneral5"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="33%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#F44336"
-                        android:textSize="30dp"
-                        />
-                    <TextView
-                        android:id="@+id/statuser5"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="0%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#666464"
-                        android:textSize="30dp"/>
-                    <TextView
-                        android:id="@+id/statuserdia5"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="0%"
-                        android:fontFamily="sans-serif-black"
-                        android:gravity="center"
-                        android:textColor="#666464"
-                        android:textSize="30dp"/>
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-        //A partir de aquí es toda la barra de abajo - JUEGO
 
 
     </RelativeLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </ScrollView>
+
+
 </FrameLayout>

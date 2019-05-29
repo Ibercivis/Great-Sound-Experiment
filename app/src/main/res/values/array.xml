@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="edades_array">
+        <item>Choose one...  </item>
         <item>-20            </item>
         <item>21-30          </item>
         <item>31-40          </item>
@@ -12,6 +13,7 @@
     </string-array>
 
     <string-array name="formacion_array">
+        <item>Choose one...  </item>
         <item>None           </item>
         <item>At school      </item>
         <item>Extracurricular</item>
@@ -19,12 +21,14 @@
     </string-array>
 
     <string-array name="sexo_array">
+        <item>Choose one...  </item>
         <item>Man            </item>
         <item>Woman          </item>
         <item>REF            </item>
     </string-array>
 
     <string-array name="tipocascos_array">
+        <item>Choose one...  </item>
         <item>Earphones      </item>
         <item>Headphones     </item>
         <item>Earphones BT   </item>
@@ -33,6 +37,7 @@
     </string-array>
 
     <string-array name="precios_array">
+        <item>Choose one...  </item>
         <item>10€ or -       </item>
         <item>10€-20€        </item>
         <item>20€-50€        </item>
@@ -42,6 +47,7 @@
     </string-array>
 
     <string-array name="filtro_array">
+        <item>Choose one...  </item>
         <item>Everyone       </item>
         <item>Men            </item>
         <item>Women          </item>

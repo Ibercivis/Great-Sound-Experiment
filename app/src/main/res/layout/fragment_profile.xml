@@ -118,7 +118,219 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/infoextra"
+                    android:id="@+id/mostrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/infouser"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/marcoperfil"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro1"
+                                android:textColor="#ffffff"
+                                android:layout_alignParentLeft="true"/>
+
+                            <TextView
+                                android:id="@+id/txtsexo"
+                                android:layout_marginEnd="24dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></TextView>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro2"
+                                android:layout_alignParentLeft="true"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:id="@+id/txtedad"
+                                android:layout_marginEnd="24dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></TextView>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro3"
+                                android:layout_alignParentLeft="true"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:id="@+id/txtformacion"
+                                android:layout_marginEnd="24dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></TextView>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro4"
+                                android:layout_alignParentLeft="true"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:id="@+id/txtauriculares"
+                                android:layout_marginEnd="24dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></TextView>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/pro5"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:id="@+id/txtprecio"
+                                android:layout_marginEnd="24dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="viewEnd"></TextView>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/aceptarcambios"
+                    android:layout_below="@id/mostrar"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/pro6"
+                    android:textStyle="bold"
+                    android:textColor="#B0278E"
+                    android:background="@drawable/marcobotonsolido"/>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        //A partir de aquí es toda la barra de abajo - JUEGO
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/modificar"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="770dp"
+            android:background="#A4363030"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/marcohome">
+
+                <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/infouser"
@@ -285,28 +497,40 @@
 
 
                     </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <Button
+                        android:id="@+id/aplicarcambio"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:text="aplicar"
+
+                        android:background="@drawable/boton_backgroundfiltro"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/cancelarcambio"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="12dp"
+                        android:text="cancelar"
+                        android:background="@drawable/boton_backgroundfiltro"
+                        android:textColor="@color/colorgris" />
 
                 </LinearLayout>
 
-                <Button
-                    android:layout_width="250dp"
-                    android:layout_height="35dp"
-                    android:id="@+id/aceptarcambios"
-                    android:layout_below="@id/infoextra"
-                    android:layout_centerHorizontal="true"
-                    android:text="@string/pro6"
-                    android:textStyle="bold"
-                    android:textColor="#B0278E"
-                    android:background="@drawable/marcobotonsolido"/>
+
+            </LinearLayout>
 
 
-            </RelativeLayout>
-        </ScrollView>
-
-        //A partir de aquí es toda la barra de abajo - JUEGO
-
-
-
+        </LinearLayout>
 
     </RelativeLayout>
 

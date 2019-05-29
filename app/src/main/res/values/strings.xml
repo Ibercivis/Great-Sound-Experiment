@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">GES</string>
+    <string name="base_url">https://gse.ibercivis.es</string>
 
     <string name="claim1">Are you able to distinguish which audio sounds better?</string>
     <string name="claim2">Listen, learn, compete</string>
@@ -30,7 +31,7 @@
     <string name="pro3">Musical formation:</string>
     <string name="pro4">Headphones:</string>
     <string name="pro5">Price range:</string>
-    <string name="pro6">Apply changes</string>
+    <string name="pro6">Modify</string>
 
     <string name="login1">LOG IN</string>
     <string name="login2">Username</string>
@@ -54,5 +55,8 @@
 
     <string name="claim6">I think...</string>
     <string name="claim7">...sounds better</string>
+
+    <string name="token"></string>
+    <string name="idUser"></string>
 
 </resources>

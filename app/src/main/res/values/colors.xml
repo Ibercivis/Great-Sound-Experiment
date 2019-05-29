@@ -9,4 +9,12 @@
     <color name="rosachica">#cc4742</color>
     <color name="rosabarra">#8b314e</color>
     <color name="rosasplash">#9c3756</color>
+
+    <color name="colorcero">#252424</color>
+    <color name="colormal">#8A0808</color>
+    <color name="colornormal">#BECE54</color>
+    <color name="colorbien">#8BC34A</color>
+    <color name="colorgloria">#4D8D03</color>
+
+
 </resources>
