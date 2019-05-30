@@ -98,9 +98,9 @@
                 android:layout_toLeftOf="@id/spinnerfiltro"
                 android:layout_centerVertical="true"
                 android:textStyle="bold"
-                android:textColor="@color/rosachica"
+                android:textColor="#000000"
                 android:textSize="16sp"
-                android:text="Filtro:"/>
+                android:text="@string/stats3"/>
 
             <Spinner
                 android:layout_marginLeft="40dp"
@@ -121,7 +121,7 @@
                 android:layout_centerVertical="true"
                 android:layout_height="30dp"
                 android:layout_marginRight="16dp"
-                android:text="Aplicar"
+                android:text="@string/login4"
                 android:background="@drawable/boton_backgroundfiltro"/>
 
         </RelativeLayout>
@@ -259,9 +259,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginTop="8dp"
-                                android:textColor="#78A217"
+                                android:textColor="#0B0C0A"
                                 android:textSize="16sp"
-                                android:text="75%"/>
+                                android:text="-"/>
 
                         </RelativeLayout>
 
@@ -275,7 +275,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                android:progress="75"
+                                android:progress="0"
                                 android:progressBackgroundTint="@color/colorgris" />
 
                         </LinearLayout>
@@ -346,9 +346,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginTop="8dp"
-                                android:textColor="#78A217"
+                                android:textColor="#080908"
                                 android:textSize="16sp"
-                                android:text="87%"/>
+                                android:text="-"/>
 
                         </RelativeLayout>
 
@@ -362,7 +362,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                android:progress="87"
+                                android:progress="0"
                                 android:progressBackgroundTint="@color/colorgris" />
 
                         </LinearLayout>
@@ -434,9 +434,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginTop="8dp"
-                                android:textColor="#78A217"
+                                android:textColor="#020202"
                                 android:textSize="16sp"
-                                android:text="80%"/>
+                                android:text="-"/>
 
                         </RelativeLayout>
 
@@ -450,7 +450,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                android:progress="80"
+                                android:progress="0"
                                 android:progressBackgroundTint="@color/colorgris" />
 
                         </LinearLayout>
@@ -583,9 +583,9 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
                                     android:layout_marginTop="8dp"
-                                    android:textColor="#78A217"
+                                    android:textColor="#080907"
                                     android:textSize="16sp"
-                                    android:text="75%"/>
+                                    android:text="-"/>
 
                             </RelativeLayout>
 
@@ -599,7 +599,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                    android:progress="75"
+                                    android:progress="0"
                                     android:progressBackgroundTint="@color/colorgris" />
 
                             </LinearLayout>
@@ -670,9 +670,9 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
                                     android:layout_marginTop="8dp"
-                                    android:textColor="#78A217"
+                                    android:textColor="#050702"
                                     android:textSize="16sp"
-                                    android:text="87%"/>
+                                    android:text="-"/>
 
                             </RelativeLayout>
 
@@ -686,7 +686,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                    android:progress="87"
+                                    android:progress="0"
                                     android:progressBackgroundTint="@color/colorgris" />
 
                             </LinearLayout>
@@ -758,9 +758,9 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
                                     android:layout_marginTop="8dp"
-                                    android:textColor="#78A217"
+                                    android:textColor="#0D0F09"
                                     android:textSize="16sp"
-                                    android:text="80%"/>
+                                    android:text="-"/>
 
                             </RelativeLayout>
 
@@ -774,7 +774,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                    android:progress="80"
+                                    android:progress="0"
                                     android:progressBackgroundTint="@color/colorgris" />
 
                             </LinearLayout>
@@ -905,9 +905,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#0A0C05"
                                         android:textSize="16sp"
-                                        android:text="75%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -921,7 +921,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="75"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>
@@ -992,9 +992,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#040502"
                                         android:textSize="16sp"
-                                        android:text="87%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -1008,7 +1008,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="87"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>
@@ -1080,9 +1080,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#070904"
                                         android:textSize="16sp"
-                                        android:text="80%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -1096,7 +1096,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="80"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>
@@ -1227,9 +1227,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#010201"
                                         android:textSize="16sp"
-                                        android:text="75%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -1243,7 +1243,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="75"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>
@@ -1314,9 +1314,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#070903"
                                         android:textSize="16sp"
-                                        android:text="87%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -1330,7 +1330,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="87"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>
@@ -1402,9 +1402,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#050702"
                                         android:textSize="16sp"
-                                        android:text="80%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -1418,7 +1418,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="80"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>
@@ -1544,9 +1544,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#060703"
                                         android:textSize="16sp"
-                                        android:text="75%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -1560,7 +1560,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="75"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>
@@ -1631,9 +1631,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#030301"
                                         android:textSize="16sp"
-                                        android:text="87%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -1647,7 +1647,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="87"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>
@@ -1719,9 +1719,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignParentRight="true"
                                         android:layout_marginTop="8dp"
-                                        android:textColor="#78A217"
+                                        android:textColor="#070902"
                                         android:textSize="16sp"
-                                        android:text="80%"/>
+                                        android:text="-"/>
 
                                 </RelativeLayout>
 
@@ -1735,7 +1735,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                                        android:progress="80"
+                                        android:progress="0"
                                         android:progressBackgroundTint="@color/colorgris" />
 
                                 </LinearLayout>

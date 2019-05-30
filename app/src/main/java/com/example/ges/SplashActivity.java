@@ -24,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
         ProgressBar pd = findViewById(R.id.progressdialog);
         pd = new ProgressBar(SplashActivity.this);
 
-        esperarYMain(2000);
+        verificarLog();
 
     }
 
@@ -39,6 +39,16 @@ public class SplashActivity extends AppCompatActivity {
 
     }
 
+    public void verificarLog(){
+        SessionManager session = new SessionManager(getApplicationContext());
+        if(session.isLoggedIn()==true){
+            esperarYJugar(2000);
+        } else if (session.isLoggedIn()==false){
+            esperarYMain(2000);
+        }
+
+    }
+
     public void esperarYMain(int milisegundos) {
 
         Handler handler = new Handler();
@@ -47,6 +57,20 @@ public class SplashActivity extends AppCompatActivity {
                 // acciones que se ejecutan tras los milisegundos
 
                 transi1();
+            }
+        }, milisegundos);
+    }
+
+    public void esperarYJugar(int milisegundos) {
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                // acciones que se ejecutan tras los milisegundos
+
+                Intent intent = new Intent(getApplicationContext(), Jugar.class);
+                finish();
+                startActivity(intent);
             }
         }, milisegundos);
     }

@@ -1,5 +1,6 @@
 package com.example.ges;
 
+import android.animation.LayoutTransition;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -30,8 +31,10 @@ public class Nivel4 extends AppCompatActivity {
 
     public MediaPlayer mp1, mp2;
     public ImageView bplay1, bplay2;
-    int cantidadAudios=13;
+    int cantidadAudios=25;
     int sonando = 0;
+    int sonando1 = 0;
+    int sonando2 = 0;
     Button voto1, voto2;
     public Resultado result1, result2, result3;
     int partidas = 1;
@@ -46,6 +49,8 @@ public class Nivel4 extends AppCompatActivity {
         bplay2 = findViewById(R.id.boton2);
         voto1 = findViewById(R.id.audio1);
         voto2 = findViewById(R.id.audio2);
+        voto1.setVisibility(View.GONE);
+        voto2.setVisibility(View.GONE);
         int int1;
         result1=generarPares(4);
         barra = findViewById(R.id.barraprogreso);
@@ -97,15 +102,24 @@ public class Nivel4 extends AppCompatActivity {
 
     public void play1(View view) {
 
+        sonando1=1;
+
+        if(sonando2==1){
+            voto1.setVisibility(View.VISIBLE);
+            voto2.setVisibility(View.VISIBLE);
+            votovoto.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        }
+
         if(mp1.isPlaying()==false){
 
-            bplay1.setImageResource(R.drawable.volume_azul);
-            bplay2.setImageResource(R.drawable.mute_blanco);
+            bplay1.setImageResource(R.drawable.audio1_on);
+            bplay2.setImageResource(R.drawable.audio2_off);
             mp1.start();
             mp2.start();
             mp1.setVolume(1,1);
             mp2.setVolume(0, 0);
             sonando = 1;
+
         }
 
 
@@ -113,27 +127,38 @@ public class Nivel4 extends AppCompatActivity {
         if(mp1.isPlaying()==true){
             if(sonando==1){
 
+
             }
             if(sonando==2){
-                bplay1.setImageResource(R.drawable.volume_azul);
-                bplay2.setImageResource(R.drawable.mute_blanco);
+                bplay1.setImageResource(R.drawable.audio1_on);
+                bplay2.setImageResource(R.drawable.audio2_off);
                 mp1.setVolume(1,1);
                 mp2.setVolume(0, 0);
                 sonando=1;
+
             }
         }
     }
 
     public void play2(View view) {
 
+        sonando2 = 1;
+
+        if(sonando1==1){
+            voto1.setVisibility(View.VISIBLE);
+            voto2.setVisibility(View.VISIBLE);
+            votovoto.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
+        }
+
         if(mp2.isPlaying()==false){
             sonando = 2;
-            bplay2.setImageResource(R.drawable.volume_azul);
-            bplay1.setImageResource(R.drawable.mute_blanco);
+            bplay2.setImageResource(R.drawable.audio2_on);
+            bplay1.setImageResource(R.drawable.audio1_off);
             mp1.start();
             mp2.start();
             mp1.setVolume(0,0);
             mp2.setVolume(1, 1);
+
 
         }
 
@@ -142,13 +167,16 @@ public class Nivel4 extends AppCompatActivity {
         if(mp2.isPlaying()==true){
             if(sonando==2){
 
+
             }
             if(sonando==1){
-                bplay2.setImageResource(R.drawable.volume_azul);
-                bplay1.setImageResource(R.drawable.mute_blanco);
+                bplay2.setImageResource(R.drawable.audio2_on);
+                bplay1.setImageResource(R.drawable.audio1_off);
                 mp1.setVolume(0,0);
                 mp2.setVolume(1, 1);
                 sonando=2;
+
+
             }
         }
     }

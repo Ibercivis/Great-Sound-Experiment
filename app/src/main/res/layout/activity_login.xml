@@ -176,6 +176,21 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/recordar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contraseña"
+        android:layout_marginTop="12dp"
+        android:text="@string/login5"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_alignEnd="@id/contraseña"
+        android:layout_marginEnd="32dp"
+        android:textSize="12sp"
+        android:textColor="#F5F7FF"
+        android:clickable="true"
+        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="35dp"
@@ -183,12 +198,114 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/boton_redondo_inicio"
+        android:background="@drawable/boton_background_transparente"
         android:text="@string/login4"
         android:textSize="16dp"
         android:clickable="true"
         android:textStyle="bold"
         android:onClick="loginRequest"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/recordando"
+        android:layout_width="match_parent"
+        android:layout_height="770dp"
+        android:background="#A4363030"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/marcobotonsolido">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="Email:"
+                    android:textColor="@color/colorgris"
+                    android:fontFamily="sans-serif-condensed"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/recov_text_input"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/recover_password"
+
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/login6"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="#252424"
+                        android:textColorHint="#141010"
+                        android:visibility="visible"
+                        android:maxLines="1"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+
+                        />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/botonrecordar"
+                    android:layout_margin="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login4"
+                    android:background="@drawable/boton_backgroundfiltro"/>
+
+                <Button
+                    android:id="@+id/cancelarrecordar"
+                    android:layout_margin="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login7"
+                    android:background="@drawable/boton_backgroundfiltro"/>
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/cargando"

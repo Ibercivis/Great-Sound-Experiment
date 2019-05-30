@@ -7,7 +7,7 @@ public class Partida {
     public String audio1;
     public String audio2;
     public String audioBueno;
-    public int cantidadAudios = 13;
+    public int cantidadAudios = 25;
 
     public String getIdPartida()
     {
@@ -63,29 +63,29 @@ public class Partida {
 
 
         if(nivel==1){
-            grupo1 = 0;
+            grupo1 = 2;
             grupo2 = 1;
             audio1 = "a"+grupo1+contador;
             audio2 = "a"+grupo2+contador;
             audioBueno = audio2;
         }
         if(nivel==2){
-            grupo1 = 2;
+            grupo1 = 0;
             grupo2 = 1;
             audio1 = "a"+grupo1+contador;
             audio2 = "a"+grupo2+contador;
             audioBueno = audio2;
         }
         if(nivel==3){
-            grupo1 = 2;
-            grupo2 = 3;
+            grupo1 = 3;
+            grupo2 = 1;
             audio1 = "a"+grupo1+contador;
             audio2 = "a"+grupo2+contador;
             audioBueno = audio2;
         }
         if(nivel==4){
-            grupo1 = 4;
-            grupo2 = 5;
+            grupo1 = 3;
+            grupo2 = 4;
             audio1 = "a"+grupo1+contador;
             audio2 = "a"+grupo2+contador;
             audioBueno = audio2;

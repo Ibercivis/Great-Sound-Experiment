@@ -12,10 +12,13 @@ import br.com.simplepass.loading_button_lib.customViews.CircularProgressButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    int creado = 0;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        creado = 0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final CircularProgressButton boton1 = findViewById(R.id.button);
@@ -26,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boton1.startAnimation();
-
+                creado = 1;
                 esperarYRegistro(boton1, 650);
 
 
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boton2.startAnimation();
+                creado = 1;
                 esperarYLogin(boton2, 650);
             }
         });
@@ -45,9 +49,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        if (creado == 1)
+            recreate();
+
+        super.onResume();
+
+    }
+
     public void aRegistro() {
         Intent intent = new Intent (this, Registro.class);
-        finish();
+
         startActivity(intent);
 
 
@@ -55,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void aLogin() {
         Intent intent = new Intent (this, Login.class);
-        finish();
+
         startActivity(intent);
 
 

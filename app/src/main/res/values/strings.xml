@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GES</string>
+    <string name="app_name">The GSE</string>
     <string name="base_url">https://gse.ibercivis.es</string>
 
     <string name="claim1">Are you able to distinguish which audio sounds better?</string>
@@ -21,6 +21,7 @@
     <string name="stats">Statistics</string>
     <string name="stats1">Here you can check your stats</string>
     <string name="stats2">You can perform your own analysis using the filters</string>
+    <string name="stats3">Filter:</string>
 
     <string name="perfil">Profile</string>
     <string name="userpro">Username:</string>
@@ -32,11 +33,15 @@
     <string name="pro4">Headphones:</string>
     <string name="pro5">Price range:</string>
     <string name="pro6">Modify</string>
+    <string name="pro7">Close session</string>
 
     <string name="login1">LOG IN</string>
     <string name="login2">Username</string>
     <string name="login3">Password</string>
     <string name="login4">APPLY</string>
+    <string name="login5">Have you forgotten your password?</string>
+    <string name="login6">E-mail</string>
+    <string name="login7">Cancel</string>
 
     <string name="reto">The Challenge</string>
     <string name="reto1">Do you accept the challenge?</string>

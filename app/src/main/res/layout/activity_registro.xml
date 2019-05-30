@@ -389,7 +389,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/infoextra"
         android:layout_marginTop="24dp"
-        android:background="@drawable/boton_redondo_inicio"
+        android:background="@drawable/boton_background_transparente"
         android:text="@string/login4"
         android:clickable="true"
         android:layout_marginBottom="24dp"

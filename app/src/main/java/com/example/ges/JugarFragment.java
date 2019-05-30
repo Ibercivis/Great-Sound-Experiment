@@ -2,16 +2,23 @@ package com.example.ges;
 
 
 import android.app.ActivityOptions;
+import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 
 /**
@@ -53,11 +60,21 @@ public class JugarFragment extends Fragment {
 
     }
 
-    public void transi1(){
+    public void transi1() {
 
-        Intent intent = new Intent(getContext(), Nivel1.class);
+        AudioManager audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
-        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(getActivity()).toBundle());
+        if (audioManager.isWiredHeadsetOn() == true) {
+
+            Intent intent = new Intent(getContext(), Nivel1.class);
+
+            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(getActivity()).toBundle());
+
+        } else {
+            Toast toast1 = Toast.makeText(getActivity(), "Debes conectar tus auriculares para jugar", Toast.LENGTH_SHORT);
+            toast1.setGravity(Gravity.CENTER, 0, 0);
+            toast1.show();
+        }
 
     }
 

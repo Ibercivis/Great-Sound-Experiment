@@ -33,6 +33,18 @@ public class SessionManager {
         editor = pref.edit();
     }
 
+    public void setClear(){
+        editor.putBoolean(KEY_IS_LOGGEDIN, false);
+        editor.putString(KEY_NAME, "");
+        editor.putString(KEY_ID, "");
+        editor.putString(KEY_TOKEN, "");
+
+        editor.commit();
+
+        Log.d(TAG, "User session closed!");
+
+    }
+
     public void setLogin(boolean isLoggedIn, String username) {
 
         editor.putBoolean(KEY_IS_LOGGEDIN, isLoggedIn);

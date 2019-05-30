@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GES</string>
+    <string name="app_name">The GSE</string>
     <string name="base_url">https://gse.ibercivis.es</string>
 
     <string name="claim1">¿Eres capaz de distinguir qué audio suena mejor?</string>
@@ -21,11 +21,15 @@
     <string name="stats">Estadísticas</string>
     <string name="stats1">Aquí puedes consultar tus estadísticas</string>
     <string name="stats2">Puedes realizar tu propio análisis empleando los filtros</string>
+    <string name="stats3">Filtro:</string>
 
     <string name="login1">IDENTIFÍCATE</string>
     <string name="login2">Usuario</string>
     <string name="login3">Contraseña</string>
     <string name="login4">ACEPTAR</string>
+    <string name="login5">¿Olvidaste tu contraseña?</string>
+    <string name="login6">E-mail</string>
+    <string name="login7">Cancelar</string>
 
     <string name="perfil">Perfil</string>
     <string name="userpro">Nombre de usuario:</string>
@@ -37,6 +41,7 @@
     <string name="pro4">Tipo de auriculares:</string>
     <string name="pro5">Rango de precio:</string>
     <string name="pro6">Modificar</string>
+    <string name="pro7">Cerrar sesión</string>
 
     <string name="reto">El Reto</string>
     <string name="reto1">¿Aceptas el reto?</string>
@@ -57,4 +62,6 @@
 
     <string name="token"></string>
     <string name="idUser"></string>
+
+
 </resources>

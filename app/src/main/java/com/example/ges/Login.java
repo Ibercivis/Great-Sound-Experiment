@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,10 @@ public class Login extends AppCompatActivity {
 
     TextView login_username_textview;
     TextView login_password_textview;
+    TextView recover_password_textview;
+    TextView recovpass;
+
+
 
     String error_check;
 
@@ -36,6 +41,38 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Button recover = findViewById(R.id.botonrecordar);
+        Button cancrecov = findViewById(R.id.cancelarrecordar);
+        recovpass = findViewById(R.id.recordar);
+        final LinearLayout recovlay = findViewById(R.id.recordando);
+
+        recovpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recovlay.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+
+        cancrecov.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                recovlay.setVisibility(View.GONE);
+
+            }
+        });
+
+        recover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recoverRequest();
+            }
+        });
+
+
 
 
     }
@@ -102,6 +139,13 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     error.printStackTrace();
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast;
+                    CharSequence text;
+                    text = "Error while login: " + error.getLocalizedMessage() + ".";
+                    toast = Toast.makeText(getApplicationContext(), text, duration);
+                    toast.show();
+                    cargar.setVisibility(View.GONE);
                 }
             }) {
                 @Override
@@ -189,6 +233,108 @@ public class Login extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void recoverRequest () {
+        final LinearLayout cargar = findViewById(R.id.cargando);
+
+
+        recover_password_textview = (TextView) findViewById(R.id.recover_password);
+        cargar.setVisibility(View.VISIBLE);
+
+
+
+
+            // Url for the webservice
+            String url = getString(R.string.base_url) + "/recover.php";
+
+            RequestQueue queue = Volley.newRequestQueue(this);
+            StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        System.out.println(response.toString());
+
+                        JSONObject responseJSON = new JSONObject(response);
+
+                        if ((int) responseJSON.get("result") == 1) {
+
+                            cargar.setVisibility(View.GONE);
+                            Toast toast;
+                            CharSequence text;
+                            int duration = Toast.LENGTH_SHORT;
+                            text = "Recibirás un mail en tu bandeja de entrada.";
+                            toast = Toast.makeText(getApplicationContext(), text, duration);
+                            toast.show();
+                            openMain();
+
+
+
+                        } else {
+                            int duration = Toast.LENGTH_SHORT;
+                            Toast toast;
+                            CharSequence text;
+
+                            text = "Error while recovering.";
+                            toast = Toast.makeText(getApplicationContext(), text, duration);
+                            toast.show();
+
+                            // Clean the text fields for new entries
+                            login_username_textview.setText("");
+                            login_password_textview.setText("");
+                            recover_password_textview.setText("");
+                            cargar.setVisibility(View.GONE);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast;
+                        CharSequence text;
+
+                        text = "Error while recovering.";
+                        toast = Toast.makeText(getApplicationContext(), text, duration);
+                        toast.show();
+
+                        // Clean the text fields for new entries
+                        login_username_textview.setText("");
+                        login_password_textview.setText("");
+                        recover_password_textview.setText("");
+                        cargar.setVisibility(View.GONE);
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    error.printStackTrace();
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast;
+                    CharSequence text;
+                    text = "Error while login: " + error.getLocalizedMessage() + ".";
+                    toast = Toast.makeText(getApplicationContext(), text, duration);
+                    toast.show();
+                    cargar.setVisibility(View.GONE);
+                }
+            }) {
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> login_params = new HashMap<String, String>();
+
+                    login_params.put("email", recover_password_textview.getText().toString());
+
+                    return login_params;
+                }
+
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("Content-Type", "application/x-www-form-urlencoded");
+                    return params;
+                }
+            };
+            queue.add(sr);
+
+    }
+
+
 }
 
 

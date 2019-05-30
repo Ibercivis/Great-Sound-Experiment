@@ -1,6 +1,7 @@
 package com.example.ges;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -56,16 +57,17 @@ public class ProfileFragment extends Fragment {
         final Spinner cascosspinner = (Spinner) v.findViewById(R.id.spinnerauriculares);
         final Spinner preciospinner = (Spinner) v.findViewById(R.id.spinnerprecios);
         final Spinner formaspinner = (Spinner) v.findViewById(R.id.spinnerformacion);
-        TextView usernametext = v.findViewById(R.id.textparauser);
-        TextView atext = v.findViewById(R.id.txtedad);
-        TextView stext = v.findViewById(R.id.txtsexo);
-        TextView ftext = v.findViewById(R.id.txtformacion);
-        TextView htext = v.findViewById(R.id.txtauriculares);
-        TextView ptext = v.findViewById(R.id.txtprecio);
+        final TextView usernametext = v.findViewById(R.id.textparauser);
+        final TextView atext = v.findViewById(R.id.txtedad);
+        final TextView stext = v.findViewById(R.id.txtsexo);
+        final TextView ftext = v.findViewById(R.id.txtformacion);
+        final TextView htext = v.findViewById(R.id.txtauriculares);
+        final TextView ptext = v.findViewById(R.id.txtprecio);
 
         final Button applychange = v.findViewById(R.id.aplicarcambio);
         final Button cancelchange = v.findViewById(R.id.cancelarcambio);
         final Button apply = v.findViewById(R.id.aceptarcambios);
+        final Button cerrar = v.findViewById(R.id.cerrarsesion);
 
         final LinearLayout tabmodificar = v.findViewById(R.id.modificar);
         final LinearLayout info = v.findViewById(R.id.mostrar);
@@ -103,6 +105,7 @@ public class ProfileFragment extends Fragment {
                 info.setVisibility(View.GONE);
                 tabmodificar.setVisibility(View.VISIBLE);
                 apply.setVisibility(View.INVISIBLE);
+                cerrar.setVisibility(View.INVISIBLE);
 
             }
         });
@@ -114,6 +117,8 @@ public class ProfileFragment extends Fragment {
                 info.setVisibility(View.VISIBLE);
                 tabmodificar.setVisibility(View.GONE);
                 apply.setVisibility(View.VISIBLE);
+                cerrar.setVisibility(View.VISIBLE);
+                getInfoRequest(usernametext, stext, atext, ftext, htext, ptext);
             }
         });
 
@@ -124,6 +129,18 @@ public class ProfileFragment extends Fragment {
                 info.setVisibility(View.VISIBLE);
                 tabmodificar.setVisibility(View.GONE);
                 apply.setVisibility(View.VISIBLE);
+                cerrar.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SessionManager session = new SessionManager(getActivity());
+                session.setClear();
+                Intent intent = new Intent(getActivity(), SplashActivity.class);
+                startActivity(intent);
 
             }
         });

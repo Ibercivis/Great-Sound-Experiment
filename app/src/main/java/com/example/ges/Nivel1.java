@@ -33,7 +33,7 @@ public class Nivel1 extends AppCompatActivity {
 
     public MediaPlayer mp1, mp2;
     public ImageView bplay1, bplay2;
-    int cantidadAudios=13;
+    int cantidadAudios=25;
     int sonando = 0;
     int sonando2= 0;
     int sonando1 = 0;

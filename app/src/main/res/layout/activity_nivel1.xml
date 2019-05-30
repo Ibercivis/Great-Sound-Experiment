@@ -58,6 +58,12 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="4dp"
                 android:src="@drawable/barranivel1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_gravity="center_horizontal"
+                android:text="WAV/16bit/44100Hz vs WAV/8bit/22050Hz"/>
 
         </LinearLayout>
 
