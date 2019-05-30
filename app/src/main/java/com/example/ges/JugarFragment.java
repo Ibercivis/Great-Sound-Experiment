@@ -39,6 +39,7 @@ public class JugarFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_jugar, container, false);
 
         Button boton = view.findViewById(R.id.botonjugar);
+        int i=0;
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
