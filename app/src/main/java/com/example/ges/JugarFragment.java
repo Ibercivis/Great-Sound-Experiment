@@ -3,6 +3,7 @@ package com.example.ges;
 
 import android.app.ActivityOptions;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothHeadset;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -65,18 +66,31 @@ public class JugarFragment extends Fragment {
 
         AudioManager audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
+        if(isBluetoothHeadsetConnected() == true){
+
         if (audioManager.isWiredHeadsetOn() == true) {
 
             Intent intent = new Intent(getContext(), Nivel1.class);
 
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(getActivity()).toBundle());
 
-        } else {
+        } else if(isBluetoothHeadsetConnected() == true){
+            Intent intent = new Intent(getContext(), Nivel1.class);
+
+            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(getActivity()).toBundle());
+        }
+
+    } else {
             Toast toast1 = Toast.makeText(getActivity(), "Debes conectar tus auriculares para jugar", Toast.LENGTH_SHORT);
             toast1.setGravity(Gravity.CENTER, 0, 0);
             toast1.show();
         }
+    }
 
+    public static boolean isBluetoothHeadsetConnected() {
+        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        return mBluetoothAdapter != null && mBluetoothAdapter.isEnabled()
+                && mBluetoothAdapter.getProfileConnectionState(BluetoothHeadset.HEADSET) == BluetoothHeadset.STATE_CONNECTED;
     }
 
 }

@@ -19,7 +19,7 @@
     <string name="claim5">Are you ready to choose the audio that sounds best?</string>
 
     <string name="stats">Statistics</string>
-    <string name="stats1">Here you can check your stats</string>
+    <string name="stats1">Here you can check your statistics. You can apply a filter to the general statistics and, in this way, get an idea of ​​the results obtained by the different user profiles.</string>
     <string name="stats2">You can perform your own analysis using the filters</string>
     <string name="stats3">Filter:</string>
 
@@ -64,4 +64,5 @@
     <string name="token"></string>
     <string name="idUser"></string>
 
+    <string name="rgpd">For a correct compliance with the new regulation of Data Protection, you are informed that we are going to register your email address on our servers, with the sole purpose of being able to offer a password recovery service in case you forget it. The rest of the data that is requested will be used only for statistical purposes. You can request more information or ask us to delete your data from our servers, for this write an email to the address info@ibercivis.es</string>
 </resources>

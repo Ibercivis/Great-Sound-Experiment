@@ -357,8 +357,9 @@ public class Nivel3 extends AppCompatActivity {
     public void aNivel3(){
 
         Intent intent = new Intent (this, Nivel4.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intent);
         finish();
+        startActivity(intent);
+
 
     }
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -56,6 +57,33 @@ public class Registro extends AppCompatActivity {
         final Spinner cascosspinner = (Spinner) findViewById(R.id.spinnerauriculares);
         final Spinner preciospinner = (Spinner) findViewById(R.id.spinnerprecios);
         final Spinner formaspinner = (Spinner) findViewById(R.id.spinnerformacion);
+        final LinearLayout rgpd = findViewById(R.id.protecciondatos);
+
+        Button applyrgpd = findViewById(R.id.rgpdapply);
+        Button cancelrgpd = findViewById(R.id.rgpdcancel);
+        Button registar = findViewById(R.id.registroaceptar);
+
+        registar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rgpd.setVisibility(View.VISIBLE);
+            }
+        });
+
+        applyrgpd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signupRequest();
+            }
+        });
+
+        cancelrgpd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rgpd.setVisibility(View.GONE);
+            }
+        });
+
 // Creamos adaptador, fijamos la vista dropdown y asociamos adaptador a array y spinner
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
                 R.array.sexo_array, android.R.layout.simple_spinner_item);
@@ -187,7 +215,7 @@ public class Registro extends AppCompatActivity {
 
     }
 
-    public void signupRequest (View view) {
+    public void signupRequest () {
         final LinearLayout cargar = findViewById(R.id.cargando);
 
         cargar.setVisibility(View.VISIBLE);

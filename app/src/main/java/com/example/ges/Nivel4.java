@@ -361,8 +361,9 @@ finish();
     public void aNivel5(){
 
         Intent intent = new Intent (this, Nivel5.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivityForResult(intent, 0);
         finish();
+        startActivityForResult(intent, 0);
+
 
     }
 

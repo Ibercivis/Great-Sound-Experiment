@@ -19,7 +19,7 @@
     <string name="claim5">¿Estás preparado para elegir el audio que mejor suena?</string>
 
     <string name="stats">Estadísticas</string>
-    <string name="stats1">Aquí puedes consultar tus estadísticas</string>
+    <string name="stats1">Aquí podrás consultar tus estadísticas. Puedes aplicar un filtro a la estadística general y, de esta manera, hacerte una idea de los resultados que obtienen los distintos perfiles de usuario.</string>
     <string name="stats2">Puedes realizar tu propio análisis empleando los filtros</string>
     <string name="stats3">Filtro:</string>
 
@@ -62,6 +62,8 @@
 
     <string name="token"></string>
     <string name="idUser"></string>
+
+    <string name="rgpd">Para un correcto cumplimiento de la nueva reglamentación de Protección de Datos, se le informa de que vamos a registrar su dirección de email en nuestros servidores, con la única finalidad de poder ofrecer un servicio de recuperación de contraseña en caso de que se le olvide. El resto de datos que se le pidan se utilizarán únicamente con fines estadísticos. Puede solicitar más información o pedir que borremos sus datos de nuestros servidores, para ello escriba un email a la dirección info@ibercivis.es</string>
 
 
 </resources>

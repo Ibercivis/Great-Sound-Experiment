@@ -46,85 +46,70 @@
         // Zona Amarilla de ESCUCHA
 
         <LinearLayout
-            android:id="@+id/espacioaudios"
+            android:id="@+id/espaciofiltro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/titulo"
             android:layout_marginTop="24dp"
             android:orientation="vertical"
             android:background="@drawable/marcoclaim"
-
+android:visibility="gone"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_marginVertical="2dp"
+                android:paddingVertical="2dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/stats1"
-                android:textStyle="bold"
-                android:textSize="16dp"
-                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
-                android:textColor="#ffffff"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/stats2"
-                android:layout_marginBottom="8dp"
-                android:textColor="#ffffff"/>
+                android:layout_below="@id/espacioaudios"
+                android:id="@+id/filtros"
+                >
+
+                <TextView
+                    android:id="@+id/filtrotit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:text="@string/stats3"/>
+
+                <Spinner
+                    android:layout_marginLeft="60dp"
+                    android:id="@+id/spinnerfiltro"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/filtrotit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    >
+
+                </Spinner>
+
+<!--
+                <Button
+                    android:id="@+id/aplicar"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/login4"
+                    android:background="@drawable/boton_backgroundfiltro"/>
+-->
+
+            </RelativeLayout>
 
 
 
         </LinearLayout>
 
-        <RelativeLayout
-            android:layout_marginVertical="2dp"
-            android:paddingVertical="2dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_below="@id/espacioaudios"
-            android:id="@+id/filtros"
-            >
 
-            <TextView
-                android:id="@+id/filtrotit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/spinnerfiltro"
-                android:layout_centerVertical="true"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:text="@string/stats3"/>
-
-            <Spinner
-                android:layout_marginLeft="40dp"
-                android:id="@+id/spinnerfiltro"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="textEnd"
-                >
-
-            </Spinner>
-
-            <Button
-                android:id="@+id/aplicar"
-                android:layout_alignParentRight="true"
-                android:layout_width="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_height="30dp"
-                android:layout_marginRight="16dp"
-                android:text="@string/login4"
-                android:background="@drawable/boton_backgroundfiltro"/>
-
-        </RelativeLayout>
 
         //BLOQUE DE STATS PARA EL NIVEL 1
 
@@ -137,9 +122,10 @@
             app:cardBackgroundColor="#EBE6E6"
             app:cardElevation="8dp"
             app:cardCornerRadius="8dp"
-            android:layout_below="@id/filtros"
+            android:layout_below="@id/espaciofiltro"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp"
+            android:visibility="gone"
            >
 
             <LinearLayout
@@ -1760,7 +1746,63 @@
 
         //BLOQUE DE STATS PARA EL NIVEL 2
 
+        <LinearLayout
+            android:id="@+id/inicio"
+            android:layout_width="match_parent"
+            android:layout_height="770dp"
+            android:background="#A4363030"
+            android:gravity="center"
 
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/marcobotonsolido">
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stats"
+                    android:layout_marginHorizontal="12dp"
+                    android:textColor="@color/colorgris"
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stats1"
+                    android:layout_marginHorizontal="12dp"
+                    android:textColor="@color/colorgris"
+                    android:fontFamily="sans-serif-condensed"/>
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp">
+
+                    <Button
+                        android:id="@+id/aceptar"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:text="@string/login4"
+                        android:background="@drawable/boton_backgroundfiltro"/>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
 
 
     </RelativeLayout>

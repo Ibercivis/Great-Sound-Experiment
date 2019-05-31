@@ -11,14 +11,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_marginTop="30dp"
+
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_centerInParent="true"
         android:contentDescription="LogoGSE"
         app:srcCompat="@drawable/logosolido2"
         android:transitionName="mainlogo"
-        android:layout_marginBottom="16dp"
+
         />
 
     <ProgressBar
@@ -27,5 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/ibercivis"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ibercivis_transparente_blanco"/>
 
 </RelativeLayout>

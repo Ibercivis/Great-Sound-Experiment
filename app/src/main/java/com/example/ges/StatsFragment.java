@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -70,7 +71,9 @@ public class StatsFragment extends Fragment {
         final LinearLayout detalle3 = v.findViewById(R.id.detaillev3);
         final LinearLayout detalle4 = v.findViewById(R.id.detaillev4);
         final LinearLayout detalle5 = v.findViewById(R.id.detaillev5);
+        final LinearLayout alinicio = v.findViewById(R.id.inicio);
         final CardView cardstat = v.findViewById(R.id.cardview);
+        final LinearLayout parafiltro = v.findViewById(R.id.espaciofiltro);
 
         final ProgressBar lev1gen = v.findViewById(R.id.genlev1);
         final ProgressBar lev1ind = v.findViewById(R.id.indlev1);
@@ -106,7 +109,7 @@ public class StatsFragment extends Fragment {
         final TextView num5g = v.findViewById(R.id.numg5);
         final TextView num5i = v.findViewById(R.id.numi5);
         final TextView num5h = v.findViewById(R.id.numh5);
-        Button apply = v.findViewById(R.id.aplicar);
+        Button apply = v.findViewById(R.id.aceptar);
 
         xpand1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -210,12 +213,28 @@ public class StatsFragment extends Fragment {
 
         filtrospinner.setAdapter(adapter1);
 
-        apply.setOnClickListener(new View.OnClickListener() {
+        filtrospinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 getInfoRequest(filtrospinner, lev1gen, lev1ind, lev1hoy, lev2gen, lev2ind, lev2hoy,
                         lev3gen, lev3ind, lev3hoy, lev4gen, lev4ind, lev4hoy, lev5gen, lev5ind, lev5hoy,
                         num1g, num1i, num1h, num2g, num2i, num2h, num3g, num3i, num3h, num4g, num4i, num4h, num5g, num5i, num5h);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        apply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alinicio.setVisibility(View.GONE);
+                parafiltro.setVisibility(View.VISIBLE);
+                cardstat.setVisibility(View.VISIBLE);
             }
         });
 
@@ -328,7 +347,7 @@ public class StatsFragment extends Fragment {
 
                     }
                     else {
-                        Log.println(1, "Error", "Algo ha fallado que la respuesta es 0");
+                        Log.println(Log.ASSERT, "Error", "Algo ha fallado que la respuesta es 0");
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

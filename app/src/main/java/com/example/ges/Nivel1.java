@@ -365,15 +365,16 @@ public class Nivel1 extends AppCompatActivity {
     public void aNivel2(){
 
         Intent intent = new Intent (this, Nivel2.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
         finish();
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
 
     }
 
     public void aJuego(View view){
         Intent intent = new Intent (this, Nivel1.class);
-        startActivity(intent);
         finish();
+        startActivity(intent);
+
     }
 
 

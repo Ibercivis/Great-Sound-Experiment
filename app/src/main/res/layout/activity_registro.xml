@@ -384,6 +384,7 @@
 
 
     <Button
+        android:id="@+id/registroaceptar"
         android:layout_width="240dp"
         android:layout_height="35dp"
         android:layout_centerHorizontal="true"
@@ -394,7 +395,62 @@
         android:clickable="true"
         android:layout_marginBottom="24dp"
         android:textStyle="bold"
-        android:onClick="signupRequest"/>
+        />
+
+    <LinearLayout
+        android:id="@+id/protecciondatos"
+        android:layout_width="match_parent"
+        android:layout_height="770dp"
+        android:background="#A4363030"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/marcobotonsolido">
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rgpd"
+                android:layout_marginHorizontal="12dp"
+                android:textColor="@color/colorgris"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/rgpdapply"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:text="@string/login4"
+                android:background="@drawable/boton_backgroundfiltro"/>
+
+                <Button
+                    android:id="@+id/rgpdcancel"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:textColor="@color/colorgris"
+                    android:text="@string/login7"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/boton_backgroundfiltro"/>
+
+        </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/cargando"
