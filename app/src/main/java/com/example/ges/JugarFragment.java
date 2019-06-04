@@ -66,7 +66,7 @@ public class JugarFragment extends Fragment {
 
         AudioManager audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
-        if(isBluetoothHeadsetConnected() == true){
+
 
         if (audioManager.isWiredHeadsetOn() == true) {
 
@@ -80,7 +80,7 @@ public class JugarFragment extends Fragment {
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(getActivity()).toBundle());
         }
 
-    } else {
+     else {
             Toast toast1 = Toast.makeText(getActivity(), "Debes conectar tus auriculares para jugar", Toast.LENGTH_SHORT);
             toast1.setGravity(Gravity.CENTER, 0, 0);
             toast1.show();
