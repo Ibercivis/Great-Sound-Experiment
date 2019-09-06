@@ -68,7 +68,6 @@
         android:textColor="#FFFF"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:textSize="20dp"
         android:layout_below="@id/imageView"/>
 
@@ -233,6 +232,39 @@
 
                 <Spinner
                     android:id="@+id/spinnersexo"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"></Spinner>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/pro8"
+                    android:textSize="16dp"
+                    android:layout_alignParentLeft="true"/>
+
+                <Spinner
+                    android:id="@+id/spinnerpais"
                     android:textAlignment="viewEnd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

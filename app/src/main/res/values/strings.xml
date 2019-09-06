@@ -31,9 +31,10 @@
     <string name="pro2">Age:</string>
     <string name="pro3">Musical formation:</string>
     <string name="pro4">Headphones:</string>
-    <string name="pro5">Price range:</string>
+    <string name="pro5">Headphones price:</string>
     <string name="pro6">Modify</string>
     <string name="pro7">Close session</string>
+    <string name="pro8">Country:</string>
 
     <string name="login1">LOG IN</string>
     <string name="login2">Username</string>
@@ -42,6 +43,7 @@
     <string name="login5">Have you forgotten your password?</string>
     <string name="login6">E-mail</string>
     <string name="login7">Cancel</string>
+
 
     <string name="reto">The Challenge</string>
     <string name="reto1">Do you accept the challenge?</string>

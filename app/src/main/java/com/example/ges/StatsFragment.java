@@ -324,7 +324,7 @@ public class StatsFragment extends Fragment {
                         pdi5.setProgress(Integer.valueOf(value), true);
                         coloreaNum(Integer.valueOf(value), n5i);
 
-                        jsonArray1 = jsonArray.getJSONArray(2); //Array histórico de la persona
+                        jsonArray1 = jsonArray.getJSONArray(2); //Array histórico del Filtro
                         value = Integer.valueOf(String.valueOf(jsonArray1.getJSONObject(0).get("percentage"))); //Nivel 1 del histórico
                         pdg1.setProgress(Integer.valueOf(value), true);
                         coloreaNum(Integer.valueOf(value), n1g);

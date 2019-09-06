@@ -242,7 +242,7 @@ public class Nivel5 extends AppCompatActivity {
             elresultado3 = result3.getGanador();
             if(elresultado3==1){
                 gameRequest(5,1); //ACIERTO 5, 1
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡Pasas al siguiente nivel!", Toast.LENGTH_SHORT);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡RETO SUPERADO!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aEnhorabuena();
@@ -323,7 +323,7 @@ public class Nivel5 extends AppCompatActivity {
             elresultado3 = result3.getGanador();
             if(elresultado3==2){
                 gameRequest(5,1); //ACIERTO 5, 1
-                Toast toast1 = Toast.makeText(getApplicationContext(), "¡ENHORABUENA!", Toast.LENGTH_SHORT);
+                Toast toast1 = Toast.makeText(getApplicationContext(), "¡RETO SUPERADO!", Toast.LENGTH_SHORT);
                 toast1.setGravity(Gravity.CENTER, 0, 0);
                 toast1.show();
                 aEnhorabuena();

@@ -81,6 +81,7 @@ public class Nivel1 extends AppCompatActivity {
             Partida partida = new Partida(elnivel, i);
             listaPartidas.put(nombre, partida); // Generada una lista de pares de audios de nivel 1.
         }
+
         Partida partidafinal = listaPartidas.get(KEY);
         int id1 = getApplicationContext().getResources().getIdentifier(partidafinal.getAudio1(), "raw", getApplicationContext().getPackageName());
         int id2 = getApplicationContext().getResources().getIdentifier(partidafinal.getAudio2(), "raw", getApplicationContext().getPackageName());

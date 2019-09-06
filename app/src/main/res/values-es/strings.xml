@@ -39,9 +39,10 @@
     <string name="pro2">Edad:</string>
     <string name="pro3">Formación musical:</string>
     <string name="pro4">Tipo de auriculares:</string>
-    <string name="pro5">Rango de precio:</string>
+    <string name="pro5">Precio auriculares:</string>
     <string name="pro6">Modificar</string>
     <string name="pro7">Cerrar sesión</string>
+    <string name="pro8">País:</string>
 
     <string name="reto">El Reto</string>
     <string name="reto1">¿Aceptas el reto?</string>

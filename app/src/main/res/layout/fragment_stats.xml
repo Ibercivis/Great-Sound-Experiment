@@ -53,7 +53,7 @@
             android:layout_marginTop="24dp"
             android:orientation="vertical"
             android:background="@drawable/marcoclaim"
-android:visibility="gone"
+            android:visibility="visible"
             >
 
             <RelativeLayout
@@ -62,7 +62,6 @@ android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_below="@id/espacioaudios"
                 android:id="@+id/filtros"
@@ -72,15 +71,14 @@ android:visibility="gone"
                     android:id="@+id/filtrotit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:text="@string/stats3"/>
 
                 <Spinner
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="6dp"
                     android:id="@+id/spinnerfiltro"
                     android:layout_centerVertical="true"
                     android:layout_below="@id/filtrotit"
@@ -1753,7 +1751,6 @@ android:layout_centerHorizontal="true"
             android:layout_height="770dp"
             android:background="#A4363030"
             android:gravity="center"
-
             >
 
             <LinearLayout

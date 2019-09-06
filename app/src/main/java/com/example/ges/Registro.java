@@ -58,6 +58,7 @@ public class Registro extends AppCompatActivity {
         final Spinner preciospinner = (Spinner) findViewById(R.id.spinnerprecios);
         final Spinner formaspinner = (Spinner) findViewById(R.id.spinnerformacion);
         final LinearLayout rgpd = findViewById(R.id.protecciondatos);
+        final Spinner countryspinner = (Spinner) findViewById(R.id.spinnerpais);
 
         Button applyrgpd = findViewById(R.id.rgpdapply);
         Button cancelrgpd = findViewById(R.id.rgpdcancel);
@@ -121,6 +122,27 @@ public class Registro extends AppCompatActivity {
                 selected = edadspinner.getSelectedItemPosition();
                 if (selected != 0)
                     edadspinner.setSelection(selected);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        ArrayAdapter<CharSequence> adapter6 = ArrayAdapter.createFromResource(this,
+                R.array.country_array, android.R.layout.simple_spinner_item);
+        adapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        countryspinner.setAdapter(adapter6);
+
+        countryspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selected = countryspinner.getSelectedItemPosition();
+                if (selected != 0)
+                    countryspinner.setSelection(selected);
 
             }
 
@@ -227,6 +249,7 @@ public class Registro extends AppCompatActivity {
         final Spinner cascosspinner = (Spinner) findViewById(R.id.spinnerauriculares);
         final Spinner preciospinner = (Spinner) findViewById(R.id.spinnerprecios);
         final Spinner formaspinner = (Spinner) findViewById(R.id.spinnerformacion);
+        final Spinner countryspinner = (Spinner) findViewById(R.id.spinnerpais);
 
         if(checkInputSignup()) {
             // Input data ok, so go with the request
@@ -273,6 +296,7 @@ public class Registro extends AppCompatActivity {
                             formaspinner.setSelection(formation_item);
                             price_item = 0;
                             preciospinner.setSelection(price_item);
+                            countryspinner.setSelection(price_item);
                             cargar.setVisibility(View.GONE);
                         }
                     } catch (JSONException e) {
@@ -297,6 +321,7 @@ public class Registro extends AppCompatActivity {
                     signup_params.put("formacion_musical", formaspinner.getSelectedItem().toString());
                     signup_params.put("rango_precio", preciospinner.getSelectedItem().toString());
                     signup_params.put("tipo_auriculares", cascosspinner.getSelectedItem().toString());
+                    signup_params.put("pais", countryspinner.getSelectedItem().toString());
 
                     return signup_params;
                 }
